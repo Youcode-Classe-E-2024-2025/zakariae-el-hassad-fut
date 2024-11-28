@@ -9,135 +9,79 @@
 <body class="bg-main-img bg-cover bg-center bg-no-repeat w-[100%] flex flex-row h-screen text-white backdrop-blur-sm">
     <main class="flex w-[80%] items-center justify-center">
         <div class="bg-stade-img bg-contain bg-center bg-no-repeat h-[100%] w-[100%] flex justify-items-center align-middle">
-          <div class=" grid grid-cols-8 grid-rows-12 place-items-center ml-32 mb-4">
+          <div id="terrain" class=" grid grid-cols-8 grid-rows-12 place-items-center ml-32 mb-4">
             <!-- GB -->
           
-                <div class="relative w-[70%] col-start-1 row-start-6 right-2 -top-10">
+                <div class="relative max-w-[70%] min-w-[70%] col-start-1 row-start-6 right-2 -top-10">
                     <img class="w-full h-auto " src="../img/carte2.png" alt="large image">
-                    <div>
-                      <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="../img/baldi.avif" alt="small image">
-                    <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">123</p>
-                    <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">CB</p>
-                    <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">Baldi</p>
-                    <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="../img/espagne.png" alt="small image">
-                    <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="../img/laliga1.png" alt="small image">
-                    <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[25px] h-auto" src="../img/barcelone.png" alt="small image">
+                    <div id="GB">
                     </div>
-                    <button onclick="toggleModal()"><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
+                    <button onclick="toggleModaljour('GB')"><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
                   </div>
          
             <!-- défenseur -->
-              <div class="relative w-[70%] col-start-3 row-start-5 right-14 bottom-16">
+              <div class="relative max-w-[70%] min-w-[70%] col-start-3 row-start-5 right-14 bottom-16">
                 <img class="w-full h-auto " src="../img/carte2.png" alt="large image">
-                    <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="../img/baldi.avif" alt="small image">
-                    <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">123</p>
-                    <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">CB</p>
-                    <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">Baldi</p>
-                    <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="../img/espagne.png" alt="small image">
-                    <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="../img/laliga1.png" alt="small image">
-                    <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[25px] h-auto" src="../img/barcelone.png" alt="small image">
-                    <button><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
+                <div id="LB">
+                </div>
+                    <button  onclick="toggleModaljour('LB')"><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
               </div>
-              <div class="relative w-[70%] col-start-2 row-start-6 bottom-20 right-2 ">
+              <div class="relative max-w-[70%] min-w-[70%] col-start-2 row-start-6 bottom-20 right-2 ">
                 <img class="w-full h-auto " src="../img/carte2.png" alt="large image">
-                    <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="../img/baldi.avif" alt="small image">
-                    <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">123</p>
-                    <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">CB</p>
-                    <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">Baldi</p>
-                    <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="../img/espagne.png" alt="small image">
-                    <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="../img/laliga1.png" alt="small image">
-                    <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[25px] h-auto" src="../img/barcelone.png" alt="small image">
-                    <button><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
+                <div id="CA">
+                </div>
+                    <button onclick="toggleModaljour('CA')"><img class="w-[40%] absolute top-[80px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
               </div>
-              <div class="relative w-[70%] col-start-2 row-start-7 bottom-12 right-12">
+              <div class="relative max-w-[70%] min-w-[70%] col-start-2 row-start-7 bottom-12 right-12">
                 <img class="w-full h-auto " src="../img/carte2.png" alt="large image">
-                    <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="../img/baldi.avif" alt="small image">
-                    <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">123</p>
-                    <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">CB</p>
-                    <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">Baldi</p>
-                    <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="../img/espagne.png" alt="small image">
-                    <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="../img/laliga1.png" alt="small image">
-                    <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[25px] h-auto" src="../img/barcelone.png" alt="small image">
-                    <button><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
+                <div id="CB">
+                </div>
+                    <button onclick="toggleModaljour('CB')"><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
               </div>
-              <div class="relative w-[70%] col-start-3 row-start-8 right-32 bottom-6">
+              <div class="relative max-w-[70%] min-w-[70%] col-start-3 row-start-8 right-32 bottom-6">
                 <img class="w-full h-auto " src="../img/carte2.png" alt="large image">
-                    <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="../img/baldi.avif" alt="small image">
-                    <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">123</p>
-                    <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">CB</p>
-                    <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">Baldi</p>
-                    <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="../img/espagne.png" alt="small image">
-                    <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="../img/laliga1.png" alt="small image">
-                    <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[25px] h-auto" src="../img/barcelone.png" alt="small image">
-                    <button><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
+                <div id="RB">
+                </div>
+                    <button onclick="toggleModaljour('RB')"><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
               </div>
             <!-- milieu -->
-              <div class="relative w-[70%] col-start-4 row-start-5 left-16 bottom-7">
+              <div class="relative max-w-[70%] min-w-[70%] col-start-4 row-start-5 left-16 bottom-7">
                 <img class="w-full h-auto " src="../img/carte2.png" alt="large image">
-                <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="../img/baldi.avif" alt="small image">
-                <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">123</p>
-                <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">CB</p>
-                <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">Baldi</p>
-                <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="../img/espagne.png" alt="small image">
-                <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="../img/laliga1.png" alt="small image">
-                <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[25px] h-auto" src="../img/barcelone.png" alt="small image">
-                <button><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
+                <div id="CMA">
                 </div>
-                <div class="relative w-[70%] col-start-4 row-start-6 right-20 bottom-9 ">
-                  <img class="w-full h-auto " src="../img/carte2.png" alt="large image">
-                    <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="../img/baldi.avif" alt="small image">
-                    <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">123</p>
-                    <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">CB</p>
-                    <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">Baldi</p>
-                    <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="../img/espagne.png" alt="small image">
-                    <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="../img/laliga1.png" alt="small image">
-                    <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[25px] h-auto" src="../img/barcelone.png" alt="small image">
-                    <button><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
+                    <button onclick="toggleModaljour('CMA')"><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
                 </div>
-                <div class="relative w-[70%] col-start-4 row-start-7 left-16 top-4">
+                <div class="relative max-w-[70%] min-w-[70%] col-start-4 row-start-6 right-20 bottom-9 ">
                   <img class="w-full h-auto " src="../img/carte2.png" alt="large image">
-                    <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="../img/baldi.avif" alt="small image">
-                    <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">123</p>
-                    <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">CB</p>
-                    <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">Baldi</p>
-                    <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="../img/espagne.png" alt="small image">
-                    <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="../img/laliga1.png" alt="small image">
-                    <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[25px] h-auto" src="../img/barcelone.png" alt="small image">
-                    <button><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
+                  <div id="CMD">
+                  </div>
+                      <button onclick="toggleModaljour('CMD')"><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
+                </div>
+                <div class="relative max-w-[70%] min-w-[70%] col-start-4 row-start-7 left-16 top-4">
+                  <img class="w-full h-auto " src="../img/carte2.png" alt="large image">
+                  <div id="CMF">
+                  </div>
+                      <button onclick="toggleModaljour('CMF')"><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
                 </div>
             <!-- attack -->
-                <div class="relative w-[70%] col-start-6 row-start-5  bottom-9 right-20  ">
+                <div class="relative max-w-[70%] min-w-[70%] col-start-6 row-start-5  bottom-9 right-20  ">
                   <img class="w-full h-auto " src="../img/carte2.png" alt="large image">
-                  <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="../img/baldi.avif" alt="small image">
-                  <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">123</p>
-                  <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">CB</p>
-                  <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">Baldi</p>
-                  <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="../img/espagne.png" alt="small image">
-                  <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="../img/laliga1.png" alt="small image">
-                  <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[25px] h-auto" src="../img/barcelone.png" alt="small image">
-                  <button><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
+                  <div id="LWF">
+                  </div>
+                      <button onclick="toggleModaljour('LWF')"><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
                 </div>
-                <div class="relative w-[70%] col-start-7 row-start-6 bottom-9 right-20 ">
+                <div class="relative max-w-[70%] min-w-[70%] col-start-7 row-start-6 bottom-9 right-20 ">
                   <img class="w-full h-auto " src="../img/carte2.png" alt="large image">
-                    <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="../img/baldi.avif" alt="small image">
-                    <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">123</p>
-                    <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">CB</p>
-                    <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">Baldi</p>
-                    <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="../img/espagne.png" alt="small image">
-                    <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="../img/laliga1.png" alt="small image">
-                    <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[25px] h-auto" src="../img/barcelone.png" alt="small image">
-                    <button ><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
+                  <div id="CF">
+                    
+                  </div>
+                      <button onclick="toggleModaljour('CF')"><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
                 </div>
                 <div class="relative w-[70%] col-start-6 row-start-7 top-8 right-6 ">
                   <img class="w-full h-auto " src="../img/carte2.png" alt="large image">
-                    <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="../img/baldi.avif" alt="small image">
-                    <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">123</p>
-                    <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">CB</p>
-                    <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">Baldi</p>
-                    <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="../img/espagne.png" alt="small image">
-                    <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="../img/laliga1.png" alt="small image">
-                    <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[25px] h-auto" src="../img/barcelone.png" alt="small image">
-                    <button><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
+                  <div id="RWF">
+                  </div>
+                      <button onclick="toggleModaljour('RWF')"><img class="w-[40%] absolute top-[105px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto" src="../img/chenge.png" alt=""></button>
                 </div>
             </div>
         </div>
@@ -152,41 +96,104 @@
         <p>FORCE COLLECTIVE</p>
         <p class="text-[40px]">3126</p>
       </div>
-      <div class="w-[30%] mt-20 text-center text-white">
+      <div class="w-[30%] mt-12 text-center text-white">
         <p>PLAYER</p>
         <img class="rounded-2xl" src="../img/player.png" alt="">
+      </div>
+      <div class="w-[30%] mt-12 text-center text-white">
+        <p>add jour</p>
+        <button onclick="toggleModalajout()"><img class="rounded-2xl" src="../img/player.png" alt=""></button>
       </div>
     </nav>
 
 
-    <!-- popap -->
+    <!-- popap  des jour -->
     
     <section id="addModal" class="hidden model-animation fixed inset-0 bg-black bg-opacity-75 ">
       <div id="task-modal"class="flex flex-wrap justify-center align-middle my-[50px] gap-[120px]">
           <div class="bg-black text-white border border-gray-700 border-r-4 border-l-4 px-2 py-2 rounded-3xl" style="max-width: 500px;">
               <div class="flex justify-center align-middle my-2 gap-[300px]">
                   <span class="border border-gray-700 border-l-4 px-2 py-1 rounded-3xl bg-blue-950">changement</span>
-                  <button type="button" onclick="returnPage()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/chenge.png" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
+                  <button type="button" onclick="returnPagejour()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/chenge.png" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
               </div>
               <div class="flex justify-center align-middle">
-                <div id="carte1" class="relative w-[30%] ">
-                </div>
-                <!-- <div class="relative w-[30%] ">
-                  <img class="w-full h-auto " src="../img/carte2.png" alt="large image">
-                    <img class="absolute bottom-7" src="../img/baldi.avif" alt="small image">
-                    <p class="absolute bottom-32 left-9 font-bold text-[10px]">123</p>
-                    <p class="absolute bottom-28 left-9 font-bold text-[10px]">CB</p>
-                    <p class="absolute bottom-[70px] left-12 text-[20px]">Baldi</p>
-                    <img class="absolute left-9 bottom-14 w-[20px] h-auto" src="../img/espagne.png" alt="small image">
-                    <img class="absolute left-[60px] bottom-9 w-[20px] h-auto rounded-3xl" src="../img/laliga1.png" alt="small image">
-                    <img class="absolute left-[75px] bottom-12 w-[40px] h-auto" src="../img/barcelone.png" alt="small image">
-                    <button onclick="carte()"><img class="w-[30%] left-12 bottom-1 absolute h-auto" src="../img/chenge.png" alt=""></button>
-                </div> -->
-              </div>
-              
+                <div id="carte1" class="flex flex-row flex-wrap relative max-w-[30%] min-w-[30%]">
           </div>
       </div>
   </section>
+
+
+  <!-- popap de l'ajoute -->
+  <section id="addJour" class="hidden model-animation fixed inset-0 bg-black bg-opacity-75 ">
+    <div id="task-modal"class="flex flex-wrap justify-center align-middle my-[50px] gap-[120px]">
+        <div class="bg-black text-white border border-gray-700 border-r-4 border-l-4 px-2 py-2 rounded-3xl" style="max-width: 500px;">
+            <div class="flex justify-center align-middle my-2 gap-[300px]">
+                <span class="border border-gray-700 border-l-4 px-2 py-1 rounded-3xl bg-blue-950">add new task</span>
+                <button type="button" onclick="returnPageajout()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/chenge.png" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
+            </div>
+            <form action="" method="post" class="bg-white text-black flex-col justify-center gap-5 border-4 border-black  hover:border-blue-800 p-5 rounded-3xl w-[100%] ">
+                <label for="name">name</label>
+                <input id="name" type="text" placeholder="zakariae" class="border border-black rounded-3xl px-2 w-[100%]">
+                <label for="rating">rating</label>
+                <input id="rating" type="number" placeholder="50" class="border border-black rounded-3xl px-2 w-[100%]">
+                <label for="pace">pace</label>
+                <input id="pace" type="number" placeholder="80" class="border border-black rounded-3xl px-2 w-[100%]">
+                <label for="shooting">shooting</label>
+                <input id="shooting" type="number" placeholder="60" class="border border-black rounded-3xl px-2 w-[100%]">
+                <label for="shooting">shooting</label>
+                <input id="shooting" type="number" placeholder="76" class="border border-black rounded-3xl px-2 w-[100%]">
+                <label for="passing">passing</label>
+                <input id="passing" type="number" placeholder="88" class="border border-black rounded-3xl px-2 w-[100%]">
+                <label for="dribbling">dribbling</label>
+                <input id="dribbling" type="number" placeholder="69" class="border border-black rounded-3xl px-2 w-[100%]">
+                <label for="defending">defending</label>
+                <input id="defending" type="number" placeholder="80" class="border border-black rounded-3xl px-2 w-[100%]">
+                <label for="physical">physical</label>
+                <input id="physical" type="number" placeholder="97" class="border border-black rounded-3xl px-2 w-[100%]">
+
+                
+                <div class="grid grid-row-1">
+                    <label for="type">type</label>
+                    <select id="type" name="priorite" id="priorite" class="border border-black rounded-3xl px-2 w-[50%]">
+                        <option value="">GB</option>
+                        <option value="">CB</option>
+                        <option value="">CA</option>
+                        <option value="">RB</option>
+                        <option value="">LB</option>
+                        <option value="">CMD</option>
+                        <option value="">CMA</option>
+                        <option value="">CMF</option>
+                        <option value="">LWF</option>
+                        <option value="">RWF</option>
+                        <option value="">CF</option>
+                    </select>
+                </div>
+                <div>
+                  <label for="playerimag">image player</label>
+                  <input type="file" class="w-full p-2 border border-black rounded-md">
+                </div>
+                <div>
+                  <label for="nationalityimag">image nationality</label>
+                  <input type="file" class="w-full p-2 border border-black rounded-md">
+                </div>
+                <div>
+                  <label for="league">image league</label>
+                  <input type="file" class="w-full p-2 border border-black rounded-md">
+                </div>
+                <div>
+                  <label for="clubimag">image club</label>
+                  <input type="file" class="w-full p-2 border border-black rounded-md">
+                </div>
+
+                <div class="flex justify-center">
+                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-400 px-8 py-2 rounded-3xl border border-x-4 border-blue-400 hover:border-blue-700 my-5 " >add player</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</section>
+
   <script src="../index.js"></script>
 </body>
 </html>

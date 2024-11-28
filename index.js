@@ -1,12 +1,16 @@
-    const players = [
+    
+    let dataplayer ;
+    if(localStorage.product != null){
+      dataplayer = JSON.parse(localStorage.product);
+  }else{
+    dataplayer = [
         {
           name: "Messi",
           photo: "../img/img-joueurs/messi.avif",
-          position: "RW",
-          nationality: "Argentina",
-          flag: "https://cdn.sofifa.net/flags/ar.png",
-          club: "Inter Miami",
-          logo: "https://cdn.sofifa.net/meta/team/239235/120.png",
+          position: "RWF",
+          nationality: "../img/nationality/argentina.png",
+          club: "../img/clop/Inter_Miami-removebg-preview.png",
+          league: "../img/league/Major League Soccer.jpg",
           rating: 93,
           pace: 85,
           shooting: 92,
@@ -18,11 +22,10 @@
         {
           name: "Ronaldo",
           photo: "../img/img-joueurs/ronaldo.avif",
-          position: "ST",
-          nationality: "Portugal",
-          flag: "https://cdn.sofifa.net/flags/pt.png",
-          club: "Al Nassr",
-          logo: "https://cdn.sofifa.net/meta/team/2506/120.png",
+          position: "CF",
+          nationality: "../img/nationality/portugal.png",
+          club: "../img/clop/Al_Nassr-removebg-preview.png",
+          league: "../img/league/saudi.jpg",
           rating: 91,
           pace: 84,
           shooting: 94,
@@ -32,13 +35,12 @@
           physical: 77
         },
         {
-          name: "De Bruyne",
+          name: "Bruyne",
           photo: "../img/img-joueurs/de bruyne.avif",
-          position: "CM",
-          nationality: "Belgium",
-          flag: "https://cdn.sofifa.net/flags/be.png",
-          club: "Manchester City",
-          logo: "https://cdn.sofifa.net/players/239/085/25_120.png",
+          position: "CMF",
+          nationality: "../img/nationality/Belgium.png",
+          club: "../img/clop/city-removebg-preview.png",
+          league: "../img/league/premier leaghe.jpg",
           rating: 91,
           pace: 74,
           shooting: 86,
@@ -50,11 +52,10 @@
         {
           name: "Mbappé",
           photo: "../img/img-joueurs/mbappé.avif",
-          position: "ST",
-          nationality: "France",
-          flag: "https://cdn.sofifa.net/flags/fr.png",
-          club: "Real Madrid",
-          logo: "https://cdn.sofifa.net/meta/team/3468/120.png",
+          position: "CF",
+          nationality: "../img/nationality/france.png",
+          club: "../img/clop/real_madrid-removebg-preview.png",
+          league: "../img/league/la liga.png",
           rating: 92,
           pace: 97,
           shooting: 89,
@@ -64,13 +65,12 @@
           physical: 77
         },
         {
-          name: "van Dijk",
+          name: "konte",
           photo: "../img/img-joueurs/konte.avif",
-          position: "CB",
-          nationality: "Netherlands",
-          flag: "https://cdn.sofifa.net/flags/nl.png",
-          club: "Liverpool",
-          logo: "https://cdn.sofifa.net/meta/team/8/120.png",
+          position: "CA",
+          nationality: "../img/nationality/Netherlands.png",
+          club: "../img/clop/liverpool-removebg-preview.png",
+          league: "../img/league/premier leaghe.jpg",
           rating: 90,
           pace: 75,
           shooting: 60,
@@ -83,10 +83,9 @@
           name: "Rudiger",
           photo: "../img/img-joueurs/rudiger.avif",
           position: "CB",
-          nationality: "Germany",
-          flag: "https://cdn.sofifa.net/flags/de.png",
-          club: "Real Madrid",
-          logo: "https://cdn.sofifa.net/meta/team/3468/120.png",
+          nationality: "../img/nationality/almania.png",
+          club: "../img/clop/real_madrid-removebg-preview.png",
+          league: "../img/league/la liga.png",
           rating: 88,
           pace: 82,
           shooting: 55,
@@ -98,11 +97,10 @@
         {
           name: "Neymar",
           photo: "../img/img-joueurs/neymar.avif",
-          position: "LW",
-          nationality: "Brazil",
-          flag: "https://cdn.sofifa.net/flags/br.png",
-          club: "Al-Hilal",
-          logo: "https://cdn.sofifa.net/meta/team/7011/120.png",
+          position: "LWF",
+          nationality: "../img/nationality/Brazil.png",
+          club: "../img/clop/Al-Hilal-removebg-preview.png",
+          league: "../img/league/saudi.jpg",
           rating: 90,
           pace: 91,
           shooting: 83,
@@ -114,11 +112,10 @@
         {
           name: "Salah",
           photo: "../img/img-joueurs/salah.avif",
-          position: "RW",
-          nationality: "Egypt",
-          flag: "https://cdn.sofifa.net/flags/eg.png",
-          club: "Liverpool",
-          logo: "https://cdn.sofifa.net/meta/team/8/120.png",
+          position: "RWR",
+          nationality: "../img/nationality/Egypt.png",
+          club: "../img/clop/liverpool-removebg-preview.png",
+          league: "../img/league/premier leaghe.jpg",
           rating: 89,
           pace: 93,
           shooting: 87,
@@ -130,11 +127,10 @@
         {
           name: "Kimmich",
           photo: "../img/img-joueurs/kimmich.avif",
-          position: "CM",
-          nationality: "Germany",
-          flag: "https://cdn.sofifa.net/flags/de.png",
-          club: "Bayern Munich",
-          logo: "https://cdn.sofifa.net/meta/team/503/120.png",
+          position: "CMD",
+          nationality: "../img/nationality/almania.png",
+          club: "../img/clop/bayern-removebg-preview.png",
+          league: "../img/league/eredivisie.png",
           rating: 89,
           pace: 70,
           shooting: 75,
@@ -146,11 +142,10 @@
         {
           name: "Oblak",
           photo: "../img/img-joueurs/oblak.avif",
-          position: "GK",
-          nationality: "Slovenia",
-          flag: "https://cdn.sofifa.net/flags/si.png",
-          club: "Atletico Madrid",
-          logo: "https://cdn.sofifa.net/meta/team/7980/120.png",
+          position: "GB",
+          nationality: "../img/nationality/Slovenia.png",
+          club: "../img/clop/Atletico_Madrid-removebg-preview.png",
+          league: "../img/league/la liga.png",
           rating: 91,
           diving: 89,
           handling: 90,
@@ -162,11 +157,10 @@
         {
           name: "Modrić",
           photo: "../img/img-joueurs/modric.avif",
-          position: "CM",
-          nationality: "Croatia",
-          flag: "https://cdn.sofifa.net/flags/hr.png",
-          club: "Real Madrid",
-          logo: "https://cdn.sofifa.net/meta/team/3468/120.png",
+          position: "CMA",
+          nationality: "../img/nationality/Croatia.png",
+          club: "../img/clop/real_madrid-removebg-preview.png",
+          league: "../img/league/la liga.png",
           rating: 88,
           pace: 74,
           shooting: 78,
@@ -178,11 +172,10 @@
         {
           name: "Vinicius",
           photo: "../img/img-joueurs/vini.avif",
-          position: "LW",
-          nationality: "Brazil",
-          flag: "https://cdn.sofifa.net/flags/br.png",
-          club: "Real Madrid",
-          logo: "https://cdn.sofifa.net/meta/team/3468/120.png",
+          position: "LWF",
+          nationality: "../img/nationality/Brazil.png",
+          club: "../img/clop/real_madrid-removebg-preview.png",
+          league: "../img/league/la liga.png",
           rating: 89,
           pace: 91,
           shooting: 88,
@@ -194,11 +187,10 @@
         {
           name: "Brahim",
           photo: "../img/img-joueurs/brahim.avif",
-          position: "LW",
-          nationality: "Morocco",
-          flag: "https://cdn.sofifa.net/flags/ma.png",
-          club: "Real Madrid",
-          logo: "https://cdn.sofifa.net/meta/team/3468/120.png",
+          position: "LWR",
+          nationality: "../img/nationality/moroco.jpg",
+          club: "../img/clop/real_madrid-removebg-preview.png",
+          league: "../img/league/la liga.png",
           rating: 82,
           pace: 85,
           shooting: 74,
@@ -210,11 +202,10 @@
         {
           name: "Benzema",
           photo: "../img/img-joueurs/brnzema.avif",
-          position: "ST",
-          nationality: "France",
-          flag: "https://cdn.sofifa.net/flags/fr.png",
-          club: "Al-Ittihad",
-          logo: "https://cdn.sofifa.net/meta/team/7023/120.png",
+          position: "CF",
+          nationality: "../img/nationality/france.png",
+          club: "../img/clop/Al-Ittihad-removebg-preview.png",
+          league: "../img/league/saudi.jpg",
           rating: 90,
           pace: 80,
           shooting: 87,
@@ -226,11 +217,10 @@
         {
             name: "Coman",
             photo: "../img/img-joueurs/coman.avif",
-            position: "LW",
-            nationality: "France",
-            flag: "https://cdn.sofifa.net/flags/fr.png",
-            club: "Bayern Munich",
-            logo: "https://cdn.sofifa.net/meta/team/120.png",
+            position: "LWR",
+            nationality: "../img/nationality/france.png",
+            club: "../img/clop/bayern-removebg-preview.png",
+            league: "../img/league/eredivisie.png",
             rating: 85,
             pace: 92,
             shooting: 72,
@@ -242,11 +232,10 @@
           {
             name: "Dier",
             photo: "../img/img-joueurs/dier.avif",
-            position: "LW",
-            nationality: "England",
-            flag: "https://cdn.sofifa.net/flags/gb.png",
-            club: "Tottenham Hotspur",
-            logo: "https://cdn.sofifa.net/meta/team/120.png",
+            position: "LWF",
+            nationality: "../img/nationality/England.png",
+            club: "../img/clop/Tottenham_Hotspur-removebg-preview.png",
+            league: "../img/league/premier leaghe.jpg",
             rating: 81,
             pace: 60,
             shooting: 50,
@@ -258,11 +247,10 @@
           {
             name: "Guirassy",
             photo: "../img/img-joueurs/guirassy.avif",
-            position: "LW",
-            nationality: "France",
-            flag: "https://cdn.sofifa.net/flags/fr.png",
-            club: "Stade Rennais",
-            logo: "https://cdn.sofifa.net/meta/team/120.png",
+            position: "LWF",
+            nationality: "../img/nationality/france.png",
+            club: "../img/clop/Stade_Rennais-removebg-preview.png",
+            league: "../img/league/Ligue 1.png",
             rating: 80,
             pace: 80,
             shooting: 85,
@@ -274,11 +262,10 @@
           {
             name: "Konte",
             photo: "../img/img-joueurs/konte.avif",
-            position: "LW",
-            nationality: "France",
-            flag: "https://cdn.sofifa.net/flags/fr.png",
-            club: "Chelsea",
-            logo: "https://cdn.sofifa.net/meta/team/120.png",
+            position: "LWR",
+            nationality: "../img/nationality/france.png",
+            club: "../img/clop/Chelsea-removebg-preview.png",
+            league: "../img/league/premier leaghe.jpg",
             rating: 85,
             pace: 75,
             shooting: 65,
@@ -290,11 +277,10 @@
           {
             name: "Maignan",
             photo: "../img/img-joueurs/maignan.avif",
-            position: "LW",
-            nationality: "France",
-            flag: "https://cdn.sofifa.net/flags/fr.png",
-            club: "AC Milan",
-            logo: "https://cdn.sofifa.net/meta/team/120.png",
+            position: "LWF",
+            nationality: "../img/nationality/france.png",
+            club: "../img/clop/AC_Milan-removebg-preview.png",
+            league: "../img/league/Serie A.png",
             rating: 87,
             pace: 50,
             shooting: 30,
@@ -306,11 +292,10 @@
           {
             name: "Martinili",
             photo: "../img/img-joueurs/martinili.avif",
-            position: "LW",
-            nationality: "Brazil",
-            flag: "https://cdn.sofifa.net/flags/br.png",
-            club: "Arsenal",
-            logo: "https://cdn.sofifa.net/meta/team/120.png",
+            position: "LWF",
+            nationality: "../img/nationality/Brazil.png",
+            club: "../img/clop/arsenal-removebg-preview.png",
+            league: "../img/league/premier leaghe.jpg",
             rating: 82,
             pace: 80,
             shooting: 45,
@@ -322,11 +307,10 @@
           {
             name: "Thuram",
             photo: "../img/img-joueurs/thuram.avif",
-            position: "LW",
-            nationality: "France",
-            flag: "https://cdn.sofifa.net/flags/fr.png",
-            club: "Borussia Monchengladbach",
-            logo: "https://cdn.sofifa.net/meta/team/120.png",
+            position: "LWR",
+            nationality: "../img/nationality/france.png",
+            club: "./img/clop/Borussia_Monchengladbach-removebg-preview.png",
+            league: "../img/league/bundesliga.png",
             rating: 83,
             pace: 84,
             shooting: 76,
@@ -338,11 +322,10 @@
           {
             name: "White",
             photo: "../img/img-joueurs/white.avif",
-            position: "LW",
-            nationality: "England",
-            flag: "https://cdn.sofifa.net/flags/gb.png",
-            club: "Arsenal",
-            logo: "https://cdn.sofifa.net/meta/team/120.png",
+            position: "LB",
+            nationality: "../img/nationality/England.png",
+            club: "../img/clop/arsenal-removebg-preview.png",
+            league: "../img/league/premier leaghe.jpg",
             rating: 83,
             pace: 75,
             shooting: 60,
@@ -354,11 +337,10 @@
           {
             name: "Wirtz",
             photo: "../img/img-joueurs/wirtz.avif",
-            position: "LW",
-            nationality: "Germany",
-            flag: "https://cdn.sofifa.net/flags/de.png",
-            club: "Bayer Leverkusen",
-            logo: "https://cdn.sofifa.net/meta/team/120.png",
+            position: "CMF",
+            nationality: "../img/nationality/almania.png",
+            club: "../img/clop/leverkusen-removebg-preview.png",
+            league: "../img/league/eredivisie.png",
             rating: 85,
             pace: 78,
             shooting: 75,
@@ -370,11 +352,10 @@
           {
             name: "Walker",
             photo: "../img/img-joueurs/wolker.avif",
-            position: "LW",
-            nationality: "England",
-            flag: "https://cdn.sofifa.net/flags/gb.png",
-            club: "Manchester City",
-            logo: "https://cdn.sofifa.net/meta/team/120.png",
+            position: "RB",
+            nationality: "../img/nationality/England.png",
+            club: "../img/clop/city-removebg-preview.png",
+            league: "../img/league/premier leaghe.jpg",
             rating: 84,
             pace: 86,
             shooting: 60,
@@ -384,41 +365,56 @@
             physical: 78
           }
       ];
-
-
-
-
+    }
 
 const Modal=document.getElementById("addModal");
+const jour=document.getElementById("addJour");
+const addmodal=document.getElementById("task-modal");
+
+const name=document.getElementById("name");
+const rating=document.getElementById("rating");
+const pace=document.getElementById("pace");
+const shooting=document.getElementById("shooting");
+const passing=document.getElementById("passing");
+const dribbling=document.getElementById("dribbling");
+const defending=document.getElementById("defending");
+const physical=document.getElementById("physical");
+const type=document.getElementById("type");
 
 
-function toggleModal(){
+
+
+
+function toggleModaljour(position){
     Modal.classList.remove("hidden");
     Modal.classList.add("show");
+    carte(position)
 }
 
-function returnPage(){
+function returnPagejour(){
     Modal.classList.add("hidden");
 }
 
 
-function carte() {
+function carte(position) {
     const playList = document.getElementById("carte1");
     let playHTML = '';
 
-    players.forEach(play => {
+    const filteredPlayers = dataplayer.filter(player => player.position === position);
+
+    filteredPlayers.forEach(play => {
         playHTML += `
-    <div class="relative w-[200px] h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
+    <div class="relative min-w-[200px] max-w-[200px] h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
         <img class="w-full h-auto" src="../img/carte2.png" alt="large image">
-        <img class="absolute bottom-9 left-6 w-[85px] h-auto" src="${play.photo}" alt="small image">
+        <img id="playerPhoto" class="absolute bottom-9 left-6 w-[85px] h-auto" src="${play.photo}" alt="small image">
         <p class="absolute bottom-32 left-9 font-bold text-[10px]">123</p>
-        <p class="absolute bottom-28 left-9 font-bold text-[10px]">${play.position}</p>
-        <p class="absolute bottom-[70px] left-10 text-[15px] text-white">${play.name}</p>
-        <img class="absolute left-9 bottom-14 w-[20px] h-auto" src="../img/espagne.png" alt="flag">
-        <img class="absolute left-[60px] bottom-9 w-[20px] h-auto rounded-3xl" src="../img/laliga1.png" alt="league">
-        <img class="absolute left-[75px] bottom-12 w-[40px] h-auto" src="../img/barcelone.png" alt="club logo">
+        <p id="playerPosition" class="absolute bottom-28 left-9 font-bold text-[10px]">${play.position}</p>
+        <p id="playerName" class="absolute bottom-[70px] left-10 text-[15px] text-white">${play.name}</p>
+        <img id="playerNationality" class="absolute left-9 bottom-14 w-[20px] h-auto" src="${play.nationality}" alt="flag">
+        <img id="playerLeague" class="absolute left-[60px] bottom-9 w-[20px] h-auto rounded-3xl" src="${play.league}" alt="league">
+        <img id="playerClub" class="absolute left-[75px] bottom-12 w-[20px] h-auto" src="${play.club}" alt="club logo">
         <button onclick="carte()">
-            <img class="absolute w-[30%] left-12 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+            <img onclick="addPlayer(this)" class="absolute w-[30%] left-12 bottom-1 h-auto" src="../img/chenge.png" alt="change">
         </button>
     </div>`;
     });
@@ -426,4 +422,103 @@ function carte() {
     playList.innerHTML = playHTML;
 }
 
-carte();
+
+function addPlayer(tes) {
+    // العثور على البطاقة الأصلية
+    const carde = tes.closest(".relative");
+
+    // استخراج البيانات من البطاقة
+    let playerName = carde.querySelector("#playerName").innerHTML;
+    let playerPhoto = carde.querySelector("#playerPhoto").src;
+    let playerPosition = carde.querySelector("#playerPosition").innerHTML;
+    let playerNationality = carde.querySelector("#playerNationality").src;
+    let playerClub = carde.querySelector("#playerClub").src;
+    let playerLeague = carde.querySelector("#playerLeague").src;
+
+    // تحديد العنصر المناسب حسب الموقع
+    let targetElement;
+    if (playerPosition === "GB") {
+        targetElement = document.getElementById("GB");
+    } else if (playerPosition === "LB") {
+        targetElement = document.getElementById("LB");
+    } else if (playerPosition === "CA") {
+        targetElement = document.getElementById("CA");
+    } else if (playerPosition === "CB") {
+        targetElement = document.getElementById("CB");
+    } else if (playerPosition === "RB") {
+        targetElement = document.getElementById("RB");
+    } else if (playerPosition === "CMF") {
+        targetElement = document.getElementById("CMF");
+    } else if (playerPosition === "CMA") {
+        targetElement = document.getElementById("CMA");
+    } else if (playerPosition === "CMD") {
+        targetElement = document.getElementById("CMD");
+    } else if (playerPosition === "LWF") {
+        targetElement = document.getElementById("LWF");
+    } else if (playerPosition === "CF") {
+        targetElement = document.getElementById("CF");
+    } else if (playerPosition === "RWF") {
+        targetElement = document.getElementById("RWF");
+    }
+
+    // التأكد من وجود العنصر الهدف
+    if (targetElement) {
+        targetElement.innerHTML = `
+            <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="${playerPhoto}" alt="player image">
+            <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">123</p>
+            <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">${playerPosition}</p>
+            <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">${playerName}</p>
+            <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="${playerNationality}" alt="flag">
+            <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="${playerLeague}" alt="league">
+            <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[25px] h-auto" src="${playerClub}" alt="club logo">
+        `;
+    }
+    Modal.classList.add("hidden");
+}
+
+
+function toggleModalajout(){
+  jour.classList.remove("hidden");
+  jour.classList.add("show");
+}
+function returnPageajout(){
+  jour.classList.add("hidden");
+}
+
+addmodal.addEventListener("submit" , (event)=> {
+  event.preventDefault();
+
+  let newplayer={
+      name : name.value,
+      rating : rating.value,
+      pace : pace.value,
+      shooting : shooting.value,
+      passing : passing.value,
+      dribbling : dribbling.value,
+      defending : defending.value,
+      physical : physical.value,
+      type : type.value
+    };
+    if(name.value === '' || rating.value === '' || pace.value === '' || shooting.value === '' || passing.value === '' || dribbling.value === '' || defending.value === '' || physical.value === '' || type.value === ''){
+      alert("entre le titre");
+      return;
+  }
+  clearContent();
+  dataplayer.push(newplayer);
+  localStorage.setItem('product', JSON.stringify(dataplayer) );
+  console.log('Données sauvegardées dans localStorage:', localStorage.getItem('product'));
+});
+
+function clearContent(){
+      name.value = '';
+      rating.value = '';
+      pace.value = '' ;
+      shooting.value = '';
+      passing.value = '';
+      dribbling.value= '';
+      defending.value= '';
+      physical.value= '';
+      type.value='';
+}
+
+

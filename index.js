@@ -554,8 +554,8 @@ function toutcarte(dataplayer) {
         <img id="playerNationality" class="absolute left-9 bottom-14 w-[20px] h-auto" src="${play.nationality}" alt="flag">
         <img id="playerLeague" class="absolute left-[60px] bottom-9 w-[20px] h-auto rounded-3xl" src="${play.league}" alt="league">
         <img id="playerClub" class="absolute left-[75px] bottom-12 w-[20px] h-auto" src="${play.club}" alt="club logo">
-        <button onclick="deletePost(index)">
-          <img class="absolute w-[30%] left-12 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+        <button onclick="removeplaer('${play.name}')">
+          <img class="absolute w-[30%] left-12 bottom-1 h-auto" src="../img/delete.webp" alt="change">
         </button>
       </div>`;
   });
@@ -570,3 +570,13 @@ function toutcarte(dataplayer) {
 //   toutcarte(dataplayer);
 // }
 
+function removeplaer(playername){
+  const playerToRemove = dataplayer.find(player => player.name === playername);
+  if (playerToRemove) {
+    const index = dataplayer.indexOf(playerToRemove);
+    if(index > -1) {
+      dataplayer.splice(index, 1);
+    }
+  }
+  toggleModalatoutjout();
+}

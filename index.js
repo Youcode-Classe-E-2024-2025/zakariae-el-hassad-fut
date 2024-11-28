@@ -370,6 +370,7 @@
 const Modal=document.getElementById("addModal");
 const jour=document.getElementById("addJour");
 const joueurs=document.getElementById("addtoutmodel");
+const ditayJour=document.getElementById("ditayJour");
 const addmodal=document.getElementById("task-modal");
 
 const name=document.getElementById("name");
@@ -381,6 +382,7 @@ const dribbling=document.getElementById("dribbling");
 const defending=document.getElementById("defending");
 const physical=document.getElementById("physical");
 const position=document.getElementById("position");
+const club=document.getElementById("club");
 
 
 
@@ -408,14 +410,9 @@ console.log(position)
       defending:defending.value,
       physical:physical.value,
       position:position.value,
+      club:club.value
   };
 
-
-  // التحقق من ملء الحقول
-  // if (name.value === '' || rating.value === '' || pace.value === '' || shooting.value === '' || passing.value === '' || dribbling.value === '' || defending.value === '' || physical.value === '' || type.value === '') {
-  //   alert("الرجاء إدخال جميع البيانات");
-  //   return;
-  // }
   clearContent();
   dataplayer.push(newplayer);
   localStorage.setItem('product', JSON.stringify(dataplayer));
@@ -434,6 +431,7 @@ function clearContent(){
       defending.value= '';
       physical.value= '';
       position.value='';
+      club.value='';
 }
 
 
@@ -461,12 +459,12 @@ function carte(position) {
     <div class="relative min-w-[200px] max-w-[200px] h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
         <img class="w-full h-auto" src="../img/carte2.png" alt="large image">
         <img id="playerPhoto" class="absolute bottom-9 left-6 w-[85px] h-auto" src="${play.photo}" alt="small image">
-        <p class="absolute bottom-32 left-9 font-bold text-[10px]">123</p>
+        <p id="score" class="absolute bottom-32 left-9 font-bold text-[10px]">${(((play.rating)+(play.pace)+(play.shooting)+(play.passing)+(play.dribbling)+(play.defending)+(play.physical))/7).toFixed(2)}</p>
         <p id="playerPosition" class="absolute bottom-28 left-9 font-bold text-[10px]">${play.position}</p>
         <p id="playerName" class="absolute bottom-[70px] left-10 text-[15px] text-white">${play.name}</p>
         <img id="playerNationality" class="absolute left-9 bottom-14 w-[20px] h-auto" src="${play.nationality}" alt="flag">
         <img id="playerLeague" class="absolute left-[60px] bottom-9 w-[20px] h-auto rounded-3xl" src="${play.league}" alt="league">
-        <img id="playerClub" class="absolute left-[75px] bottom-12 w-[20px] h-auto" src="${play.club}" alt="club logo">
+        <img id="playerClub" class="absolute left-[75px] bottom-12 w-[20px] h-auto" src="${play.club}" alt="clob">
         <button onclick="carte()">
             <img onclick="addPlayer(this)" class="absolute w-[30%] left-12 bottom-1 h-auto" src="../img/chenge.png" alt="change">
         </button>
@@ -478,18 +476,16 @@ function carte(position) {
 
 
 function addPlayer(tes) {
-    // العثور على البطاقة الأصلية
     const carde = tes.closest(".relative");
 
-    // استخراج البيانات من البطاقة
     let playerName = carde.querySelector("#playerName").innerHTML;
+    let score = carde.querySelector("#score").innerHTML;
     let playerPhoto = carde.querySelector("#playerPhoto").src;
     let playerPosition = carde.querySelector("#playerPosition").innerHTML;
     let playerNationality = carde.querySelector("#playerNationality").src;
     let playerClub = carde.querySelector("#playerClub").src;
     let playerLeague = carde.querySelector("#playerLeague").src;
 
-    // تحديد العنصر المناسب حسب الموقع
     let targetElement;
     if (playerPosition === "GB") {
         targetElement = document.getElementById("GB");
@@ -515,16 +511,17 @@ function addPlayer(tes) {
         targetElement = document.getElementById("RWF");
     }
 
-    // التأكد من وجود العنصر الهدف
     if (targetElement) {
         targetElement.innerHTML = `
+        <div id="div1">
             <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="${playerPhoto}" alt="player image">
-            <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">123</p>
+            <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">${score}</p>
             <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">${playerPosition}</p>
             <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">${playerName}</p>
             <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="${playerNationality}" alt="flag">
             <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="${playerLeague}" alt="league">
             <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto" src="${playerClub}" alt="club logo">
+            </div>
         `;
     }
     Modal.classList.add("hidden");
@@ -541,6 +538,7 @@ function returnPageatoutjout(){
 }
 function toutcarte(dataplayer) {
   const playListContainer = document.getElementById("carte2");
+  
   let playHTML = '';
 
   dataplayer.forEach(play => {
@@ -548,9 +546,9 @@ function toutcarte(dataplayer) {
       <div class="relative min-w-[200px] max-w-[200px] h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
         <img class="w-full h-auto" src="../img/carte2.png" alt="large image">
         <img id="playerPhoto" class="absolute bottom-9 left-6 w-[85px] h-auto" src="${play.photo}" alt="small image">
-        <p class="absolute bottom-32 left-9 font-bold text-[10px]">123</p>
+        <p class="absolute bottom-32 left-9 font-bold text-[10px]">${(((play.rating)+(play.pace)+(play.shooting)+(play.passing)+(play.dribbling)+(play.defending)+(play.physical))/7).toFixed(2)}</p>
         <p id="playerPosition" class="absolute bottom-28 left-9 font-bold text-[10px]">${play.position}</p>
-        <p id="playerName" class="absolute bottom-[70px] left-10 text-[15px] text-white">${play.name}</p>
+        <p id="playerName" class="absolute bottom-[70px] right-9 text-[15px] text-white">${play.name}</p>
         <img id="playerNationality" class="absolute left-9 bottom-14 w-[20px] h-auto" src="${play.nationality}" alt="flag">
         <img id="playerLeague" class="absolute left-[60px] bottom-9 w-[20px] h-auto rounded-3xl" src="${play.league}" alt="league">
         <img id="playerClub" class="absolute left-[75px] bottom-12 w-[20px] h-auto" src="${play.club}" alt="club logo">
@@ -563,20 +561,54 @@ function toutcarte(dataplayer) {
   playListContainer.innerHTML = playHTML;
 }
 
-
-// function deletePost(index) {
-//   dataplayer.splice(index, 1);
-//   localStorage.setItem("product", JSON.stringify(dataplayer));
-//   toutcarte(dataplayer);
-// }
-
 function removeplaer(playername){
   const playerToRemove = dataplayer.find(player => player.name === playername);
   if (playerToRemove) {
     const index = dataplayer.indexOf(playerToRemove);
     if(index > -1) {
       dataplayer.splice(index, 1);
+      localStorage.setItem('product', JSON.stringify(dataplayer));
     }
   }
   toggleModalatoutjout();
 }
+
+
+function ggggg(){
+  const div = document.getElementById('div1');
+  const paragraphs = div.querySelectorAll('p');
+  const image = div.querySelectorAll('img');
+
+  paragraphs.forEach(p => p.remove());
+  image.forEach(img => img.remove());
+}
+
+
+function toggleModaladitay(){
+  ditayJour.classList.remove("hidden");
+  ditayJour.classList.add("show");
+  information();
+}
+function returnPageditay(){
+  ditayJour.classList.add("hidden");
+}
+
+function information(){
+  const information = document.getElementById('information');
+
+  information.innerHTML=`
+  <div class="grid grid-cols-2">
+                <p>name : </p><p>shbjhsddhc</p>
+                <p>nabdhbme :  </p><p>shbjhsddhc</p>
+                <p>namjfke :  </p><p>shbjhsddhc</p>
+                <p>nam,nsde :  </p><p>shbjhsddhc</p>
+                <p>fds,n v :  </p><p>shbjhsddhc</p>
+                <p>n d :  </p><p>shbjhsddhc</p>
+                <p>dn,f v :  </p><p>shbjhsddhc</p>
+                <p>rating :  </p><p>shbjhsddhc</p>
+              </div>
+  `
+}
+
+
+

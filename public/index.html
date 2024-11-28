@@ -98,7 +98,7 @@
       </div>
       <div class="w-[30%] mt-12 text-center text-white">
         <p>PLAYER</p>
-        <img class="rounded-2xl" src="../img/player.png" alt="">
+        <button onclick="toggleModalatoutjout()"><img class="rounded-2xl" src="../img/player.png" alt=""></button>
       </div>
       <div class="w-[30%] mt-12 text-center text-white">
         <p>add jour</p>
@@ -121,6 +121,21 @@
           </div>
       </div>
   </section>
+
+  <!-- popap tout  des jour -->
+    
+  <section id="addtoutmodel" class="hidden model-animation fixed inset-0 bg-black bg-opacity-75 ">
+    <div id="task-modal"class="flex flex-wrap justify-center align-middle my-[50px] gap-[120px] ">
+        <div class="bg-black text-white border border-gray-700 border-r-4 border-l-4 px-2 py-2 rounded-3xl" style="max-width: 500px;">
+            <div class="flex justify-center align-middle my-2 gap-[300px]">
+                <span class="border border-gray-700 border-l-4 px-2 py-1 rounded-3xl bg-blue-950">changement</span>
+                <button type="button" onclick="returnPageatoutjout()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/chenge.png" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
+            </div>
+            <div class="flex justify-center align-middle max-h-[500px] overflow-y-auto">
+              <div id="carte2" class="flex flex-row flex-wrap relative max-w-[30%] min-w-[30%]">
+        </div>
+    </div>
+</section>
 
 
   <!-- popap de l'ajoute -->
@@ -153,19 +168,19 @@
 
                 
                 <div class="grid grid-row-1">
-                    <label for="type">type</label>
-                    <select id="type" name="priorite" id="priorite" class="border border-black rounded-3xl px-2 w-[50%]">
-                        <option value="">GB</option>
-                        <option value="">CB</option>
-                        <option value="">CA</option>
-                        <option value="">RB</option>
-                        <option value="">LB</option>
-                        <option value="">CMD</option>
-                        <option value="">CMA</option>
-                        <option value="">CMF</option>
-                        <option value="">LWF</option>
-                        <option value="">RWF</option>
-                        <option value="">CF</option>
+                    <label for="position">position</label>
+                    <select id="position" name="position" class="border border-black rounded-3xl px-2 w-[50%]">
+                        <option value="GB">GB</option>
+                        <option value="CB">CB</option>
+                        <option value="CA">CA</option>
+                        <option value="RB">RB</option>
+                        <option value="LB">LB</option>
+                        <option value="CMD">CMD</option>
+                        <option value="CMA">CMA</option>
+                        <option value="CMF">CMF</option>
+                        <option value="LWF">LWF</option>
+                        <option value="RWF">RWF</option>
+                        <option value="CF">CF</option>
                     </select>
                 </div>
                 <div>
@@ -181,7 +196,7 @@
                   <input type="file" class="w-full p-2 border border-black rounded-md">
                 </div>
                 <div>
-                  <label for="clubimag">image club</label>
+                  <label for="clubimag"|>image club</label>
                   <input type="file" class="w-full p-2 border border-black rounded-md">
                 </div>
 

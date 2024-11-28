@@ -363,12 +363,13 @@
             dribbling: 65,
             defending: 82,
             physical: 78
-          }
+          },
       ];
     }
 
 const Modal=document.getElementById("addModal");
 const jour=document.getElementById("addJour");
+const joueurs=document.getElementById("addtoutmodel");
 const addmodal=document.getElementById("task-modal");
 
 const name=document.getElementById("name");
@@ -379,8 +380,61 @@ const passing=document.getElementById("passing");
 const dribbling=document.getElementById("dribbling");
 const defending=document.getElementById("defending");
 const physical=document.getElementById("physical");
-const type=document.getElementById("type");
+const position=document.getElementById("position");
 
+
+
+function toggleModalajout(){
+  jour.classList.remove("hidden");
+  jour.classList.add("show");
+}
+function returnPageajout(){
+  jour.classList.add("hidden");
+}
+
+
+const form = document.querySelector("form"); 
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); 
+console.log(position)
+ 
+  let newplayer = {
+      name:name.value,
+      rating:rating.value,
+      pace:pace.value,
+      shooting:shooting.value, 
+      passing:passing.value,
+      dribbling:dribbling.value,
+      defending:defending.value,
+      physical:physical.value,
+      position:position.value,
+  };
+
+
+  // التحقق من ملء الحقول
+  // if (name.value === '' || rating.value === '' || pace.value === '' || shooting.value === '' || passing.value === '' || dribbling.value === '' || defending.value === '' || physical.value === '' || type.value === '') {
+  //   alert("الرجاء إدخال جميع البيانات");
+  //   return;
+  // }
+  clearContent();
+  dataplayer.push(newplayer);
+  localStorage.setItem('product', JSON.stringify(dataplayer));
+  console.log(localStorage.getItem('product'));
+  document.getElementById('addJour').classList.add('hidden');
+});
+
+
+function clearContent(){
+      name.value = '';
+      rating.value = '';
+      pace.value = '' ;
+      shooting.value = '';
+      passing.value = '';
+      dribbling.value= '';
+      defending.value= '';
+      physical.value= '';
+      position.value='';
+}
 
 
 
@@ -470,55 +524,49 @@ function addPlayer(tes) {
             <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">${playerName}</p>
             <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="${playerNationality}" alt="flag">
             <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="${playerLeague}" alt="league">
-            <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[25px] h-auto" src="${playerClub}" alt="club logo">
+            <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto" src="${playerClub}" alt="club logo">
         `;
     }
     Modal.classList.add("hidden");
 }
 
 
-function toggleModalajout(){
-  jour.classList.remove("hidden");
-  jour.classList.add("show");
+function toggleModalatoutjout(){
+  joueurs.classList.remove("hidden");
+  joueurs.classList.add("show");
+  toutcarte(dataplayer)
 }
-function returnPageajout(){
-  jour.classList.add("hidden");
+function returnPageatoutjout(){
+  joueurs.classList.add("hidden");
 }
+function toutcarte(dataplayer) {
+  const playListContainer = document.getElementById("carte2");
+  let playHTML = '';
 
-addmodal.addEventListener("submit" , (event)=> {
-  event.preventDefault();
+  dataplayer.forEach(play => {
+    playHTML += `
+      <div class="relative min-w-[200px] max-w-[200px] h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
+        <img class="w-full h-auto" src="../img/carte2.png" alt="large image">
+        <img id="playerPhoto" class="absolute bottom-9 left-6 w-[85px] h-auto" src="${play.photo}" alt="small image">
+        <p class="absolute bottom-32 left-9 font-bold text-[10px]">123</p>
+        <p id="playerPosition" class="absolute bottom-28 left-9 font-bold text-[10px]">${play.position}</p>
+        <p id="playerName" class="absolute bottom-[70px] left-10 text-[15px] text-white">${play.name}</p>
+        <img id="playerNationality" class="absolute left-9 bottom-14 w-[20px] h-auto" src="${play.nationality}" alt="flag">
+        <img id="playerLeague" class="absolute left-[60px] bottom-9 w-[20px] h-auto rounded-3xl" src="${play.league}" alt="league">
+        <img id="playerClub" class="absolute left-[75px] bottom-12 w-[20px] h-auto" src="${play.club}" alt="club logo">
+        <button onclick="deletePost(index)">
+          <img class="absolute w-[30%] left-12 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+        </button>
+      </div>`;
+  });
 
-  let newplayer={
-      name : name.value,
-      rating : rating.value,
-      pace : pace.value,
-      shooting : shooting.value,
-      passing : passing.value,
-      dribbling : dribbling.value,
-      defending : defending.value,
-      physical : physical.value,
-      type : type.value
-    };
-    if(name.value === '' || rating.value === '' || pace.value === '' || shooting.value === '' || passing.value === '' || dribbling.value === '' || defending.value === '' || physical.value === '' || type.value === ''){
-      alert("entre le titre");
-      return;
-  }
-  clearContent();
-  dataplayer.push(newplayer);
-  localStorage.setItem('product', JSON.stringify(dataplayer) );
-  console.log('Données sauvegardées dans localStorage:', localStorage.getItem('product'));
-});
-
-function clearContent(){
-      name.value = '';
-      rating.value = '';
-      pace.value = '' ;
-      shooting.value = '';
-      passing.value = '';
-      dribbling.value= '';
-      defending.value= '';
-      physical.value= '';
-      type.value='';
+  playListContainer.innerHTML = playHTML;
 }
 
+
+// function deletePost(index) {
+//   dataplayer.splice(index, 1);
+//   localStorage.setItem("product", JSON.stringify(dataplayer));
+//   toutcarte(dataplayer);
+// }
 

@@ -817,6 +817,30 @@ video {
   height: 100vh;
 }
 
+.h-\[500px\] {
+  height: 500px;
+}
+
+.max-h-\[500px\] {
+  max-height: 500px;
+}
+
+.max-h-\[2000px\] {
+  max-height: 2000px;
+}
+
+.max-h-\[200px\] {
+  max-height: 200px;
+}
+
+.min-h-\[\] {
+  min-height: ;
+}
+
+.min-h-\[200px\] {
+  min-height: 200px;
+}
+
 .w-80 {
   width: 20rem;
 }
@@ -969,6 +993,10 @@ video {
 
 .gap-10 {
   gap: 2.5rem;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .rounded-2xl {

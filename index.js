@@ -5,6 +5,7 @@
   }else{
     dataplayer = [
         {
+          id:1,
           name: "Messi",
           photo: "../img/img-joueurs/messi.avif",
           position: "RWF",
@@ -20,6 +21,7 @@
           physical: 65
         },
         {
+          id:2,
           name: "Ronaldo",
           photo: "../img/img-joueurs/ronaldo.avif",
           position: "CF",
@@ -35,6 +37,7 @@
           physical: 77
         },
         {
+          id:3,
           name: "Bruyne",
           photo: "../img/img-joueurs/de bruyne.avif",
           position: "CMF",
@@ -50,6 +53,7 @@
           physical: 78
         },
         {
+          id:4,
           name: "Mbappé",
           photo: "../img/img-joueurs/mbappé.avif",
           position: "CF",
@@ -65,6 +69,7 @@
           physical: 77
         },
         {
+          id:5,
           name: "konte",
           photo: "../img/img-joueurs/konte.avif",
           position: "CA",
@@ -80,6 +85,7 @@
           physical: 86
         },
         {
+          id:6,
           name: "Rudiger",
           photo: "../img/img-joueurs/rudiger.avif",
           position: "CB",
@@ -95,6 +101,7 @@
           physical: 86
         },
         {
+          id:9,
           name: "Neymar",
           photo: "../img/img-joueurs/neymar.avif",
           position: "LWF",
@@ -110,6 +117,7 @@
           physical: 61
         },
         {
+          id:10,
           name: "Salah",
           photo: "../img/img-joueurs/salah.avif",
           position: "RWR",
@@ -125,6 +133,7 @@
           physical: 75
         },
         {
+          id:11,
           name: "Kimmich",
           photo: "../img/img-joueurs/kimmich.avif",
           position: "CMD",
@@ -140,6 +149,7 @@
           physical: 81
         },
         {
+          id:12,
           name: "Oblak",
           photo: "../img/img-joueurs/oblak.avif",
           position: "GB",
@@ -155,6 +165,7 @@
           positioning: 88
         },
         {
+          id:13,
           name: "Modrić",
           photo: "../img/img-joueurs/modric.avif",
           position: "CMA",
@@ -170,6 +181,7 @@
           physical: 65
         },
         {
+          id:14,
           name: "Vinicius",
           photo: "../img/img-joueurs/vini.avif",
           position: "LWF",
@@ -185,6 +197,7 @@
           physical: 61
         },
         {
+          id:15,
           name: "Brahim",
           photo: "../img/img-joueurs/brahim.avif",
           position: "LWR",
@@ -200,6 +213,7 @@
           physical: 56
         },
         {
+          id:16,
           name: "Benzema",
           photo: "../img/img-joueurs/brnzema.avif",
           position: "CF",
@@ -215,6 +229,7 @@
           physical: 82
         },
         {
+          id:17,
             name: "Coman",
             photo: "../img/img-joueurs/coman.avif",
             position: "LWR",
@@ -230,6 +245,7 @@
             physical: 72
           },
           {
+            id:18,
             name: "Dier",
             photo: "../img/img-joueurs/dier.avif",
             position: "LWF",
@@ -245,6 +261,7 @@
             physical: 79
           },
           {
+            id:19,
             name: "Guirassy",
             photo: "../img/img-joueurs/guirassy.avif",
             position: "LWF",
@@ -260,6 +277,7 @@
             physical: 78
           },
           {
+            id:20,
             name: "Konte",
             photo: "../img/img-joueurs/konte.avif",
             position: "LWR",
@@ -275,6 +293,7 @@
             physical: 88
           },
           {
+            id:21,
             name: "Maignan",
             photo: "../img/img-joueurs/maignan.avif",
             position: "LWF",
@@ -290,6 +309,7 @@
             physical: 82
           },
           {
+            id:22,
             name: "Martinili",
             photo: "../img/img-joueurs/martinili.avif",
             position: "LWF",
@@ -305,6 +325,7 @@
             physical: 78
           },
           {
+            id:23,
             name: "Thuram",
             photo: "../img/img-joueurs/thuram.avif",
             position: "LWR",
@@ -320,6 +341,7 @@
             physical: 82
           },
           {
+            id:24,
             name: "White",
             photo: "../img/img-joueurs/white.avif",
             position: "LB",
@@ -335,6 +357,7 @@
             physical: 79
           },
           {
+            id:25,
             name: "Wirtz",
             photo: "../img/img-joueurs/wirtz.avif",
             position: "CMF",
@@ -350,6 +373,7 @@
             physical: 68
           },
           {
+            id:26,
             name: "Walker",
             photo: "../img/img-joueurs/wolker.avif",
             position: "RB",
@@ -459,7 +483,7 @@ function carte(position) {
     <div class="relative min-w-[200px] max-w-[200px] h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
         <img class="w-full h-auto" src="../img/carte2.png" alt="large image">
         <img id="playerPhoto" class="absolute bottom-9 left-6 w-[85px] h-auto" src="${play.photo}" alt="small image">
-        <p id="score" class="absolute bottom-32 left-9 font-bold text-[10px]">${(((play.rating)+(play.pace)+(play.shooting)+(play.passing)+(play.dribbling)+(play.defending)+(play.physical))/7).toFixed(2)}</p>
+        <p id="ratingplayer" class="absolute bottom-32 left-9 font-bold text-[10px]">${play.rating}</p>
         <p id="playerPosition" class="absolute bottom-28 left-9 font-bold text-[10px]">${play.position}</p>
         <p id="playerName" class="absolute bottom-[70px] left-10 text-[15px] text-white">${play.name}</p>
         <img id="playerNationality" class="absolute left-9 bottom-14 w-[20px] h-auto" src="${play.nationality}" alt="flag">
@@ -479,7 +503,7 @@ function addPlayer(tes) {
     const carde = tes.closest(".relative");
 
     let playerName = carde.querySelector("#playerName").innerHTML;
-    let score = carde.querySelector("#score").innerHTML;
+    let ratingplayer = carde.querySelector("#ratingplayer").innerHTML;
     let playerPhoto = carde.querySelector("#playerPhoto").src;
     let playerPosition = carde.querySelector("#playerPosition").innerHTML;
     let playerNationality = carde.querySelector("#playerNationality").src;
@@ -515,7 +539,7 @@ function addPlayer(tes) {
         targetElement.innerHTML = `
         <div id="div1">
             <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="${playerPhoto}" alt="player image">
-            <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">${score}</p>
+            <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">${ratingplayer}</p>
             <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">${playerPosition}</p>
             <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">${playerName}</p>
             <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="${playerNationality}" alt="flag">
@@ -543,18 +567,24 @@ function toutcarte(dataplayer) {
 
   dataplayer.forEach(play => {
     playHTML += `
-      <div class="relative min-w-[200px] max-w-[200px] h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
+      <div class="relative min-w-[200px] max-w-[200px] max-h-[300px] min-h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
         <img class="w-full h-auto" src="../img/carte2.png" alt="large image">
         <img id="playerPhoto" class="absolute bottom-9 left-6 w-[85px] h-auto" src="${play.photo}" alt="small image">
-        <p class="absolute bottom-32 left-9 font-bold text-[10px]">${(((play.rating)+(play.pace)+(play.shooting)+(play.passing)+(play.dribbling)+(play.defending)+(play.physical))/7).toFixed(2)}</p>
+        <p class="absolute bottom-32 left-9 font-bold text-[10px]">${play.rating}</p>
         <p id="playerPosition" class="absolute bottom-28 left-9 font-bold text-[10px]">${play.position}</p>
         <p id="playerName" class="absolute bottom-[70px] right-9 text-[15px] text-white">${play.name}</p>
         <img id="playerNationality" class="absolute left-9 bottom-14 w-[20px] h-auto" src="${play.nationality}" alt="flag">
         <img id="playerLeague" class="absolute left-[60px] bottom-9 w-[20px] h-auto rounded-3xl" src="${play.league}" alt="league">
-        <img id="playerClub" class="absolute left-[75px] bottom-12 w-[20px] h-auto" src="${play.club}" alt="club logo">
+        <img id="playerClub" class="absolute left-[75px] bottom-12 w-[20px] h-auto" src="${play.club}" alt="club logo">        
+        <div >
         <button onclick="removeplaer('${play.name}')">
-          <img class="absolute w-[30%] left-12 bottom-1 h-auto" src="../img/delete.webp" alt="change">
+          <img class="absolute w-[30%] left-8 bottom-1 h-auto" src="../img/delete.png" alt="change">
         </button>
+        <button onclick="details('${play.name}')" >
+        <img class="absolute w-[30%] left-12 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+        </button>
+        </div>
+        
       </div>`;
   });
 
@@ -584,36 +614,51 @@ function ggggg(){
 }
 
 
-function toggleModaladitay(index){
-  ditayJour.classList.remove("hidden");
-  ditayJour.classList.add("show");
-  information(index);
-}
-function returnPageditay(){
-  ditayJour.classList.add("hidden");
-}
+function details(playername){
+  const player = dataplayer.find(player => player.name === playername);
+  if(player){
+    const playerDetailsmodal = document.getElementById('ditayJour');
+    const playerDetail = document.getElementById('datails');
 
-function information(index) {
-  const targetElement = document.getElementById('information');
-  const player = dataplayer[index];
+    playerDetailsmodal.classList.remove('hidden');
 
-  if (targetElement && player) {
-      targetElement.innerHTML = `
-          <div class="grid grid-cols-2 gap-2 text-black bg-white p-4 rounded-lg">
-              <p>Name:</p><p>${player.name}</p>
-              <p>Rating:</p><p>${player.rating}</p>
-              <p>Pace:</p><p>${player.pace}</p>
-              <p>Shooting:</p><p>${player.shooting}</p>
-              <p>Passing:</p><p>${player.passing}</p>
-              <p>Dribbling:</p><p>${player.dribbling}</p>
-              <p>Defending:</p><p>${player.defending}</p>
-              <p>Physical:</p><p>${player.physical}</p>
-              <p>Position:</p><p>${player.position}</p>
-          </div>
-      `;
+    playerDetail.innerHTML=`
+    <div class="grid grid-cols-2">
+                    <p>name : </p>
+                    <p>${player.name}</p>
+                    <p>rating :  </p>                               
+                    <p>${player.rating}</p>
+                    <p>pace :  </p>
+                    <p>${player.pace}</p>
+                    <p>shooting :  </p>
+                    <p>${player.shooting}</p>
+                    <p>passing :  </p>
+                    <p>${player.passing}</p>
+                    <p>dribbling:  </p>
+                    <p>${player.dribbling}</p>
+                    <p>defending :  </p>
+                    <p>${player.defending}</p>
+                    <p>physical :  </p>
+                    <p>${player.physical}</p>
+                  </div>
+    `;
+    // rating: 93,
+    // pace: 85,
+    // shooting: 92,
+    // passing: 91,
+    // dribbling: 95,
+    // defending: 35,
+    // physical: 65
   }
 }
+function returnPageditay(){
+     ditayJour.classList.add("hidden");
+ }
 
+ 
+
+
+ 
 
 
 

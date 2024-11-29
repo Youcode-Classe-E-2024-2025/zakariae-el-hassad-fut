@@ -414,6 +414,7 @@ const ditayJour=document.getElementById("ditayJour");
 const addmodal=document.getElementById("task-modal");
 
 const name=document.getElementById("name");
+const id = document.getElementById("id");
 const rating=document.getElementById("rating");
 const pace=document.getElementById("pace");
 const shooting=document.getElementById("shooting");
@@ -450,7 +451,8 @@ console.log(position)
       defending:defending.value,
       physical:physical.value,
       position:position.value,
-      club:club.value
+      club:club.value,
+      id:id.value
   };
 
   clearContent();
@@ -620,10 +622,12 @@ function removeplaer(playername){
 }
 
 
-function cleardiv(){
-  const div = document.getElementById('div1');
+function ggggg(element){
+  const id = element.parentElement.parentElement.firstChild.id;
+  console.log(element);
+  const div = document.getElementById(id);
   const paragraphs = div.querySelectorAll('p');
-  const image = div.querySelectorAll('img');
+  const image = div.querySelectorAll('img');  
 
   paragraphs.forEach(p => p.remove());
   image.forEach(img => img.remove());

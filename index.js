@@ -584,31 +584,36 @@ function ggggg(){
 }
 
 
-function toggleModaladitay(){
+function toggleModaladitay(index){
   ditayJour.classList.remove("hidden");
   ditayJour.classList.add("show");
-  information();
+  information(index);
 }
 function returnPageditay(){
   ditayJour.classList.add("hidden");
 }
 
-function information(){
-  const information = document.getElementById('information');
+function information(index) {
+  const targetElement = document.getElementById('information');
+  const player = dataplayer[index];
 
-  information.innerHTML=`
-  <div class="grid grid-cols-2">
-                <p>name : </p><p>shbjhsddhc</p>
-                <p>nabdhbme :  </p><p>shbjhsddhc</p>
-                <p>namjfke :  </p><p>shbjhsddhc</p>
-                <p>nam,nsde :  </p><p>shbjhsddhc</p>
-                <p>fds,n v :  </p><p>shbjhsddhc</p>
-                <p>n d :  </p><p>shbjhsddhc</p>
-                <p>dn,f v :  </p><p>shbjhsddhc</p>
-                <p>rating :  </p><p>shbjhsddhc</p>
-              </div>
-  `
+  if (targetElement && player) {
+      targetElement.innerHTML = `
+          <div class="grid grid-cols-2 gap-2 text-black bg-white p-4 rounded-lg">
+              <p>Name:</p><p>${player.name}</p>
+              <p>Rating:</p><p>${player.rating}</p>
+              <p>Pace:</p><p>${player.pace}</p>
+              <p>Shooting:</p><p>${player.shooting}</p>
+              <p>Passing:</p><p>${player.passing}</p>
+              <p>Dribbling:</p><p>${player.dribbling}</p>
+              <p>Defending:</p><p>${player.defending}</p>
+              <p>Physical:</p><p>${player.physical}</p>
+              <p>Position:</p><p>${player.position}</p>
+          </div>
+      `;
+  }
 }
+
 
 
 

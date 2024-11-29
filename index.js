@@ -392,7 +392,7 @@
             id:27,
             name: "casemiro",
             photo: "../img/img-joueurs/casemiro.avif",
-            position: "RB",
+            position: "CMD",
             nationality: "../img/nationality/England.png",
             club: "../img/clop/city-removebg-preview.png",
             league: "../img/league/premier leaghe.jpg",
@@ -404,6 +404,166 @@
             defending: 82,
             physical: 78
           },
+          {
+            id: 28,
+            name: "Lewandowski",
+            photo: "../img/img-joueurs/lewandowski.avif",
+            position: "CF",
+            nationality: "../img/nationality/Poland.png",
+            club: "../img/clop/barcelona.png",
+            league: "../img/league/la-liga.png",
+            rating: 92,
+            pace: 80,
+            shooting: 95,
+            passing: 80,
+            dribbling: 87,
+            defending: 40,
+            physical: 85
+          },
+          {
+            id: 30,
+            name: "Pedri",
+            photo: "../img/img-joueurs/pedri.avif",
+            position: "CMF",
+            nationality: "../img/nationality/Spain.png",
+            club: "../img/clop/barcelona.png",
+            league: "../img/league/la-liga.png",
+            rating: 89,
+            pace: 75,
+            shooting: 72,
+            passing: 88,
+            dribbling: 91,
+            defending: 60,
+            physical: 65
+          },
+          {
+            id: 31,
+            name: "Gavi",
+            photo: "../img/img-joueurs/gavi.avif",
+            position: "CMA",
+            nationality: "../img/nationality/Spain.png",
+            club: "../img/clop/barcelona.png",
+            league: "../img/league/la-liga.png",
+            rating: 85,
+            pace: 78,
+            shooting: 70,
+            passing: 80,
+            dribbling: 85,
+            defending: 75,
+            physical: 68
+          },
+          {
+            id: 32,
+            name: "Stegen",
+            photo: "../img/img-joueurs/stegen.avif",
+            position: "GB",
+            nationality: "../img/nationality/Germany.png",
+            club: "../img/clop/barcelona.png",
+            league: "../img/league/la-liga.png",
+            rating: 91,
+            pace: 0,
+            shooting: 0,
+            passing: 68,
+            dribbling: 50,
+            defending: 15,
+            physical: 80
+          },
+          {
+            id: 32,
+            name: "Koundé",
+            photo: "../img/img-joueurs/kounde.avif",
+            position: "CB",
+            nationality: "../img/nationality/France.png",
+            club: "../img/clop/barcelona.png",
+            league: "../img/league/la-liga.png",
+            rating: 86,
+            pace: 85,
+            shooting: 50,
+            passing: 78,
+            dribbling: 78,
+            defending: 85,
+            physical: 82
+          },
+          {
+          id: 33,
+          name: "Courtois",
+          photo: "../img/img-joueurs/courtois.avif",
+          position: "GB",
+          nationality: "../img/nationality/Belgium.png",
+          club: "../img/clop/real-madrid.png",
+          league: "../img/league/la-liga.png",
+          rating: 94,
+          pace: 0,
+          shooting: 0,
+          passing: 65,
+          dribbling: 50,
+          defending: 15,
+          physical: 82
+        },
+        {
+          id: 34,
+          name: "van-Dijk",
+          photo: "../img/img-joueurs/van-dijk.avif",
+          position: "CB",
+          nationality: "../img/nationality/Netherlands.png",
+          club: "../img/clop/liverpool.png",
+          league: "../img/league/premier-league.png",
+          rating: 91,
+          pace: 76,
+          shooting: 60,
+          passing: 71,
+          dribbling: 72,
+          defending: 91,
+          physical: 86
+        },
+        {
+          id: 35,
+          name: "Varane",
+          photo: "../img/img-joueurs/varane.avif",
+          position: "CB",
+          nationality: "../img/nationality/France.png",
+          club: "../img/clop/manchester-united.png",
+          league: "../img/league/premier-league.png",
+          rating: 87,
+          pace: 75,
+          shooting: 55,
+          passing: 65,
+          dribbling: 70,
+          defending: 88,
+          physical: 80
+        },
+        {
+          id: 36,
+          name: "Koulibaly",
+          photo: "../img/img-joueurs/koulibaly.avif",
+          position: "CA",
+          nationality: "../img/nationality/Senegal.png",
+          club: "../img/clop/chelsea.png",
+          league: "../img/league/premier-league.png",
+          rating: 86,
+          pace: 80,
+          shooting: 60,
+          passing: 65,
+          dribbling: 70,
+          defending: 90,
+          physical: 85
+        },
+        {
+          id: 37,
+          name: "de-Ligt",
+          photo: "../img/img-joueurs/de-ligt.avif",
+          position: "CA",
+          nationality: "../img/nationality/Netherlands.png",
+          club: "../img/clop/bayern-munich.png",
+          league: "../img/league/bundesliga.png",
+          rating: 86,
+          pace: 78,
+          shooting: 50,
+          passing: 70,
+          dribbling: 75,
+          defending: 87,
+          physical: 82
+        },  
       ];
     }
 
@@ -622,10 +782,10 @@ function removeplaer(playername){
 }
 
 
-function ggggg(element){
-  const id = element.parentElement.parentElement.firstChild.id;
-  console.log(element);
-  const div = document.getElementById(id);
+function ggggg(){
+  // const id = element.parentElement.parentElement.firstChild.id;
+  // console.log(element);
+  const div = document.getElementById('div1');
   const paragraphs = div.querySelectorAll('p');
   const image = div.querySelectorAll('img');  
 

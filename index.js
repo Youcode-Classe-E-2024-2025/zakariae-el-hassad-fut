@@ -388,6 +388,22 @@
             defending: 82,
             physical: 78
           },
+          {
+            id:27,
+            name: "casemiro",
+            photo: "../img/img-joueurs/casemiro.avif",
+            position: "RB",
+            nationality: "../img/nationality/England.png",
+            club: "../img/clop/city-removebg-preview.png",
+            league: "../img/league/premier leaghe.jpg",
+            rating: 99,
+            pace: 86,
+            shooting: 60,
+            passing: 70,
+            dribbling: 65,
+            defending: 82,
+            physical: 78
+          },
       ];
     }
 
@@ -481,7 +497,7 @@ function carte(position) {
     filteredPlayers.forEach(play => {
         playHTML += `
     <div class="relative min-w-[200px] max-w-[200px] h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
-        <img class="w-full h-auto" src="../img/carte2.png" alt="large image">
+        <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
         <img id="playerPhoto" class="absolute bottom-9 left-6 w-[85px] h-auto" src="${play.photo}" alt="small image">
         <p id="ratingplayer" class="absolute bottom-32 left-9 font-bold text-[10px]">${play.rating}</p>
         <p id="playerPosition" class="absolute bottom-28 left-9 font-bold text-[10px]">${play.position}</p>
@@ -568,7 +584,7 @@ function toutcarte(dataplayer) {
   dataplayer.forEach(play => {
     playHTML += `
       <div class="relative min-w-[200px] max-w-[200px] max-h-[300px] min-h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
-        <img class="w-full h-auto" src="../img/carte2.png" alt="large image">
+        <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
         <img id="playerPhoto" class="absolute bottom-9 left-6 w-[85px] h-auto" src="${play.photo}" alt="small image">
         <p class="absolute bottom-32 left-9 font-bold text-[10px]">${play.rating}</p>
         <p id="playerPosition" class="absolute bottom-28 left-9 font-bold text-[10px]">${play.position}</p>
@@ -581,7 +597,7 @@ function toutcarte(dataplayer) {
           <img class="absolute w-[30%] left-8 bottom-1 h-auto" src="../img/delete.png" alt="change">
         </button>
         <button onclick="details('${play.name}')" >
-        <img class="absolute w-[30%] left-12 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+        <img class="absolute w-[30%] right-2 bottom-1 h-auto" src="../img/delails1.png" alt="change">
         </button>
         </div>
         
@@ -604,7 +620,7 @@ function removeplaer(playername){
 }
 
 
-function ggggg(){
+function cleardiv(){
   const div = document.getElementById('div1');
   const paragraphs = div.querySelectorAll('p');
   const image = div.querySelectorAll('img');

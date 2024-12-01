@@ -325,6 +325,7 @@
           physical: 78
         },
         {
+
           id:23,
           name: "Thuram",
           photo: "../img/img-joueurs/thuram.avif",
@@ -347,6 +348,14 @@
           position: "LB",
           nationality: "../img/nationality/England.png",
           club: "../img/clop/arsenal-removebg-preview.png",
+
+          id:10,
+          name: "Salah",
+          photo: "../img/img-joueurs/salah.avif",
+          position: "RWF",
+          nationality: "../img/nationality/Egypt.png",
+          club: "../img/clop/liverpool-removebg-preview.png",
+
           league: "../img/league/premier leaghe.jpg",
           rating: 83,
           pace: 75,
@@ -453,6 +462,7 @@
           physical: 68
         },
         {
+
           id: 32,
           name: "Stegen",
           photo: "../img/img-joueurs/stegen.avif",
@@ -461,11 +471,13 @@
           club: "../img/clop/barcalona-preview.png",
           league: "../img/league/la liga.png",
           rating: 91,
+
           pace: 0,
           shooting: 0,
           passing: 68,
           dribbling: 50,
           defending: 15,
+
           physical: 80
         },
         {
@@ -476,6 +488,7 @@
           nationality: "../img/nationality/france.png",
           club: "../img/clop/barcalona-preview.png",
           league: "../img/league/la liga.png",
+
           rating: 86,
           pace: 85,
           shooting: 50,
@@ -485,6 +498,7 @@
           physical: 82
         },
         {
+
         id: 33,
         name: "Courtois",
         photo: "../img/img-joueurs/courtois.avif",
@@ -788,6 +802,7 @@
         defending: 80,
         physical: 82
       }
+
       ];
     }
 
@@ -879,6 +894,8 @@ function carte(position) {
     let playHTML = '';
 
     const filteredPlayers = dataplayer.filter(player => player.position === position);
+    console.log("here are the filtred players", filteredPlayers);
+    
 
     filteredPlayers.forEach(play => {
         playHTML += `
@@ -1046,13 +1063,6 @@ function details(playername){
                     <p>${player.physical}</p>
                   </div>
     `;
-    // rating: 93,
-    // pace: 85,
-    // shooting: 92,
-    // passing: 91,
-    // dribbling: 95,
-    // defending: 35,
-    // physical: 65
   }
 }
 function returnPageditay(){
@@ -1060,6 +1070,37 @@ function returnPageditay(){
  }
 
  
+ function toggleModalchengement(){
+  joueurs.classList.remove("hidden");
+  joueurs.classList.add("show");
+  chengement(dataplayer)
+}
+function chengement(dataplayer) {
+  const playListContainer = document.getElementById("carte2");
+  
+  let playHTML = '';
+
+  // Diro slice bach t3rd gha 8 players loulin
+  const limitedPlayers = dataplayer.slice(0, 8);
+
+  limitedPlayers.forEach(play => {
+    playHTML += `
+      <div class="relative min-w-[200px] max-w-[200px] max-h-[300px] min-h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
+        <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
+
+        <div>
+          <button onclick="removeplaer('${play.name}')">
+            <img class="absolute w-[30%] left-8 bottom-1 h-auto" src="../img/delete.png" alt="change">
+          </button>
+          <button onclick="details('${play.name}')">
+            <img class="absolute w-[30%] right-2 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+          </button>
+        </div>
+      </div>`;
+  });
+
+  playListContainer.innerHTML = playHTML;
+}
 
 
  

@@ -1025,18 +1025,6 @@ function removeplaer(playername){
 }
 
 
-function ggggg(){
-  // const id = element.parentElement.parentElement.firstChild.id;
-  // console.log(element);
-  const div = document.getElementById('div1');
-  const paragraphs = div.querySelectorAll('p');
-  const image = div.querySelectorAll('img');  
-
-  paragraphs.forEach(p => p.remove());
-  image.forEach(img => img.remove());
-}
-
-
 function details(playername){
   const player = dataplayer.find(player => player.name === playername);
   if(player){

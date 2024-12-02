@@ -932,7 +932,7 @@ function addPlayer(tes) {
 
     let targetElement;
     if (playerPosition === "GB") {
-        targetElement = document.getElementById("GB1");
+        targetElement = document.getElementById("GB");
     } else if (playerPosition === "LB") {
         targetElement = document.getElementById("LB");
     } else if (playerPosition === "CA") {
@@ -1082,7 +1082,7 @@ function returnPagechengement() {
 
 
 
-function toggleModalatoutjoutchengement() {
+function toggleModalatoutjoutchengement(position) {
   Modal1.classList.remove("hidden");
   Modal1.classList.add("show");
   carte1(position);
@@ -1136,7 +1136,7 @@ function addPlayer1(tes) {
   if (playerPosition === "GB") {
       targetElement = document.getElementById("GB1");
   } else if (playerPosition === "LB") {
-      targetElement = document.getElementById("LB");
+      targetElement = document.getElementById("LB1");
   } else if (playerPosition === "CA") {
       targetElement = document.getElementById("CB1");
   } else if (playerPosition === "CB") {
@@ -1171,6 +1171,6 @@ function addPlayer1(tes) {
       `;
   }
   console.log("hbdjhdjvdsjhcsdhc",targetElement)
-  Modal.classList.add("hidden");
+  Modal1.classList.add("hidden");
 }
 

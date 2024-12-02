@@ -296,7 +296,7 @@
           id:21,
           name: "Maignan",
           photo: "../img/img-joueurs/maignan.avif",
-          position: "LWF",
+          position: "GB",
           nationality: "../img/nationality/france.png",
           club: "../img/clop/AC_Milan-removebg-preview.png",
           league: "../img/league/Serie A.png",
@@ -807,10 +807,12 @@
     }
 
 const Modal=document.getElementById("addModal");
+const Modal1=document.getElementById("addModal1");
 const jour=document.getElementById("addJour");
 const joueurs=document.getElementById("addtoutmodel");
 const ditayJour=document.getElementById("ditayJour");
 const addmodal=document.getElementById("task-modal");
+const addchengement=document.getElementById("addchengement");
 
 const name=document.getElementById("name");
 const id = document.getElementById("id");
@@ -851,7 +853,6 @@ console.log(position)
       physical:physical.value,
       position:position.value,
       club:club.value,
-      id:id.value
   };
 
   clearContent();
@@ -931,7 +932,7 @@ function addPlayer(tes) {
 
     let targetElement;
     if (playerPosition === "GB") {
-        targetElement = document.getElementById("GB");
+        targetElement = document.getElementById("GB1");
     } else if (playerPosition === "LB") {
         targetElement = document.getElementById("LB");
     } else if (playerPosition === "CA") {
@@ -967,6 +968,7 @@ function addPlayer(tes) {
             </div>
         `;
     }
+    console.log("hbdjhdjvdsjhcsdhc",targetElement)
     Modal.classList.add("hidden");
 }
 
@@ -1070,40 +1072,105 @@ function returnPageditay(){
  }
 
  
- function toggleModalchengement(){
-  joueurs.classList.remove("hidden");
-  joueurs.classList.add("show");
-  chengement(dataplayer)
+ function toggleModalchengement() {
+  addchengement.classList.remove("hidden");
+  addchengement.classList.add("show");
 }
-function chengement(dataplayer) {
-  const playListContainer = document.getElementById("carte2");
-  
+function returnPagechengement() {
+  addchengement.classList.add("hidden");
+}
+
+
+
+function toggleModalatoutjoutchengement() {
+  Modal1.classList.remove("hidden");
+  Modal1.classList.add("show");
+  carte1(position);
+}
+
+function returnPageatoutchengement() {
+  Modal1.classList.add("hidden");
+}
+
+function carte1(position) {
+  const playList = document.getElementById("carte3");
   let playHTML = '';
 
-  // Diro slice bach t3rd gha 8 players loulin
-  const limitedPlayers = dataplayer.slice(0, 8);
+  const filteredPlayers = dataplayer.filter(player => player.position === position);
+  console.log("here are the filtred players", filteredPlayers);
+  
 
-  limitedPlayers.forEach(play => {
-    playHTML += `
-      <div class="relative min-w-[200px] max-w-[200px] max-h-[300px] min-h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
-        <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
-
-        <div>
-          <button onclick="removeplaer('${play.name}')">
-            <img class="absolute w-[30%] left-8 bottom-1 h-auto" src="../img/delete.png" alt="change">
-          </button>
-          <button onclick="details('${play.name}')">
-            <img class="absolute w-[30%] right-2 bottom-1 h-auto" src="../img/chenge.png" alt="change">
-          </button>
-        </div>
-      </div>`;
+  filteredPlayers.forEach(play => {
+      playHTML += `
+  <div class="relative min-w-[200px] max-w-[200px] h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
+      <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
+      <img id="playerPhoto" class="absolute bottom-9 left-6 w-[85px] h-auto" src="${play.photo}" alt="small image">
+      <p id="ratingplayer" class="absolute bottom-32 left-9 font-bold text-[10px]">${play.rating}</p>
+      <p id="playerPosition" class="absolute bottom-28 left-9 font-bold text-[10px]">${play.position}</p>
+      <p id="playerName" class="absolute bottom-[70px] left-10 text-[15px] text-white">${play.name}</p>
+      <img id="playerNationality" class="absolute left-9 bottom-14 w-[20px] h-auto" src="${play.nationality}" alt="flag">
+      <img id="playerLeague" class="absolute left-[60px] bottom-9 w-[20px] h-auto rounded-3xl" src="${play.league}" alt="league">
+      <img id="playerClub" class="absolute left-[75px] bottom-12 w-[20px] h-auto" src="${play.club}" alt="clob">
+      <button onclick="carte()">
+          <img onclick="addPlayer1(this)" class="absolute w-[30%] left-12 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+      </button>
+  </div>`;
   });
 
-  playListContainer.innerHTML = playHTML;
+  playList.innerHTML = playHTML;
+ 
 }
 
+function addPlayer1(tes) {
+  const carde = tes.closest(".relative");
 
- 
+  let playerName = carde.querySelector("#playerName").innerHTML;
+  let ratingplayer = carde.querySelector("#ratingplayer").innerHTML;
+  let playerPhoto = carde.querySelector("#playerPhoto").src;
+  let playerPosition = carde.querySelector("#playerPosition").innerHTML;
+  let playerNationality = carde.querySelector("#playerNationality").src;
+  let playerClub = carde.querySelector("#playerClub").src;
+  let playerLeague = carde.querySelector("#playerLeague").src;
 
+  let targetElement;
+  if (playerPosition === "GB") {
+      targetElement = document.getElementById("GB1");
+  } else if (playerPosition === "LB") {
+      targetElement = document.getElementById("LB");
+  } else if (playerPosition === "CA") {
+      targetElement = document.getElementById("CB1");
+  } else if (playerPosition === "CB") {
+      targetElement = document.getElementById("CB1");
+  } else if (playerPosition === "RB") {
+      targetElement = document.getElementById("RB1");
+  } else if (playerPosition === "CMF") {
+      targetElement = document.getElementById("CMF1");
+  } else if (playerPosition === "CMA") {
+      targetElement = document.getElementById("CMA1");
+  } else if (playerPosition === "CMD") {
+      targetElement = document.getElementById("CMD1");
+  } else if (playerPosition === "LWF") {
+      targetElement = document.getElementById("LWF1");
+  } else if (playerPosition === "CF") {
+      targetElement = document.getElementById("CF1");
+  } else if (playerPosition === "RWF") {
+      targetElement = document.getElementById("RWF1");
+  }
 
+  if (targetElement) {
+      targetElement.innerHTML = `
+      <div id="div1">
+          <img class="absolute top-[45%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-auto" src="${playerPhoto}" alt="player image">
+          <p class="absolute top-[5%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">${ratingplayer}</p>
+          <p class="absolute top-[15%] left-1/3 transform -translate-x-1/2 text-white font-bold text-[10px]">${playerPosition}</p>
+          <p class="absolute top-[45%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[10px]">${playerName}</p>
+          <img class="absolute top-[60%] left-1/3 transform -translate-x-1/2 -translate-y-1/2 w-[12px] h-auto" src="${playerNationality}" alt="flag">
+          <img class="absolute top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto rounded-3xl" src="${playerLeague}" alt="league">
+          <img class="absolute top-[60%] left-[65px] transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-auto" src="${playerClub}" alt="club logo">
+          </div>
+      `;
+  }
+  console.log("hbdjhdjvdsjhcsdhc",targetElement)
+  Modal.classList.add("hidden");
+}
 

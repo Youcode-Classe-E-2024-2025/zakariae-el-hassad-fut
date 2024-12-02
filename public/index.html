@@ -153,7 +153,7 @@
           <div class="bg-black text-white border border-gray-700 border-r-4 border-l-4 px-2 py-2 rounded-3xl" style="max-width: 500px;">
               <div class="flex justify-center align-middle my-2 gap-[300px]">
                   <span class="border border-gray-700 border-l-4 px-2 py-1 rounded-3xl bg-blue-950">changement</span>
-                  <button type="button" onclick="returnPagejour()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/chenge.png" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
+                  <button type="button" onclick="returnPagejour()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/x.jpg" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
               </div>
               <div class="flex justify-center align-middle max-h-[500px] overflow-y-auto ">
                 <div id="carte1" class="flex flex-row flex-wrap relative max-w-[30%] min-w-[30%]">
@@ -168,15 +168,155 @@
         <div class="bg-black text-white border border-gray-700 border-r-4 border-l-4 px-2 py-2 rounded-3xl" style="max-width: 500px;">
             <div class="flex justify-center align-middle my-2 gap-[300px]">
                 <span class="border border-gray-700 border-l-4 px-2 py-1 rounded-3xl bg-blue-950">changement</span>
-                <button type="button" onclick="returnPageatoutjout()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/chenge.png" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
+                <button type="button" onclick="returnPageatoutjout()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/x.jpg" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
                 
             </div>
-            <div class="flex justify-center align-middle max-h-[500px] overflow-y-auto">
-              <div id="carte2" class="flex flex-row flex-wrap relative max-w-[30%] min-w-[30%]"></div>
+            <div class="flex justify-start align-middle max-h-[500px] overflow-y-auto">
+              <div id="carte2" class="flex flex-col flex-wrap relative max-w-[30%] min-w-[30%]"></div>
             </div>
         </div>
     </div>
 </section>
+
+  <!-- popap chengement -->
+    
+  <section id="addchengement" class="hidden model-animation fixed inset-0 bg-black bg-opacity-75 ">
+    <div id="task-modal"class="flex flex-wrap justify-center align-middle my-[50px] gap-[120px] ">
+        <div class="bg-black text-white border border-gray-700 border-r-4 border-l-4 px-2 py-2 rounded-3xl" style="max-width: 500px;">
+            <div class="flex justify-center align-middle my-2 gap-[300px]">
+                <span class="border border-gray-700 border-l-4 px-2 py-1 rounded-3xl bg-blue-950">changement</span>
+                <button type="button" onclick="returnPagechengement()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/x.jpg" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
+                
+            </div>
+            <div class="flex justify-start align-middle max-h-[500px] overflow-y-auto">
+              <div class="flex flex-col flex-wrap relative max-w-[30%] min-w-[30%]">
+                <!-- GB -->
+                <div class="relative min-w-[200px] max-w-[200px] max-h-[300px] min-h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
+                  <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
+                  <div id="GB1"></div>
+                  <div>
+                    <button>
+                      <img class="absolute w-[30%] left-8 bottom-1 h-auto" src="../img/delete.png" alt="change">
+                    </button>
+                    <button onclick="toggleModaljour('GB')">
+                      <img class="absolute w-[30%] right-2 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+                    </button>
+                  </div>
+                </div>
+
+                <!-- CB CA -->
+                <div class="relative min-w-[200px] max-w-[200px] max-h-[300px] min-h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
+                  <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
+                  <div id="CB1"></div>
+                  <div>
+                    <button>
+                      <img class="absolute w-[30%] left-8 bottom-1 h-auto" src="../img/delete.png" alt="change">
+                    </button>
+                    <button onclick="toggleModaljour('CB')">
+                      <img class="absolute w-[30%] right-2 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="relative min-w-[200px] max-w-[200px] max-h-[300px] min-h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
+                  <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
+                  <div id="LB1"></div>
+                  <div>
+                    <button>
+                      <img class="absolute w-[30%] left-8 bottom-1 h-auto" src="../img/delete.png" alt="change">
+                    </button>
+                    <button onclick="toggleModaljour('LB')">
+                      <img class="absolute w-[30%] right-2 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="relative min-w-[200px] max-w-[200px] max-h-[300px] min-h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
+                  <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
+                  <div id="RB1"></div>
+                  <div>
+                    <button>
+                      <img class="absolute w-[30%] left-8 bottom-1 h-auto" src="../img/delete.png" alt="change">
+                    </button>
+                    <button onclick="toggleModaljour('RB')">
+                      <img class="absolute w-[30%] right-2 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="relative min-w-[200px] max-w-[200px] max-h-[300px] min-h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
+                  <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
+                  <div id="CMF1"></div>
+                  <div>
+                    <button>
+                      <img class="absolute w-[30%] left-8 bottom-1 h-auto" src="../img/delete.png" alt="change">
+                    </button>
+                    <button onclick="toggleModaljour('CMF')">
+                      <img class="absolute w-[30%] right-2 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="relative min-w-[200px] max-w-[200px] max-h-[300px] min-h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
+                  <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
+                  <div id="CMD1"></div>
+                  <div>
+                    <button>
+                      <img class="absolute w-[30%] left-8 bottom-1 h-auto" src="../img/delete.png" alt="change">
+                    </button>
+                    <button onclick="toggleModaljour('CMD')">
+                      <img class="absolute w-[30%] right-2 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="relative min-w-[200px] max-w-[200px] max-h-[300px] min-h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
+                  <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
+                  <div id="CMA1"></div>
+                  <div>
+                    <button>
+                      <img class="absolute w-[30%] left-8 bottom-1 h-auto" src="../img/delete.png" alt="change">
+                    </button>
+                    <button onclick="toggleModaljour('CMA')">
+                      <img class="absolute w-[30%] right-2 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="relative min-w-[200px] max-w-[200px] max-h-[300px] min-h-[300px] bg-gray-800 rounded-md overflow-hidden border shadow-lg">
+                  <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
+                  <div id="CF1"></div>
+                  <div>
+                    <button>
+                      <img class="absolute w-[30%] left-8 bottom-1 h-auto" src="../img/delete.png" alt="change">
+                    </button>
+                    <button onclick="toggleModaljour('CF')">
+                      <img class="absolute w-[30%] right-2 bottom-1 h-auto" src="../img/chenge.png" alt="change">
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="addModal1" class="hidden model-animation fixed inset-0 bg-black bg-opacity-75 ">
+  <div id="task-modal"class="flex flex-wrap justify-center align-middle my-[50px] gap-[120px]">
+      <div class="bg-black text-white border border-gray-700 border-r-4 border-l-4 px-2 py-2 rounded-3xl" style="max-width: 500px;">
+          <div class="flex justify-center align-middle my-2 gap-[300px]">
+              <span class="border border-gray-700 border-l-4 px-2 py-1 rounded-3xl bg-blue-950">changement</span>
+              <button type="button" onclick="returnPageatoutchengement()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/x.jpg" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
+          </div>
+          <div class="flex justify-center align-middle max-h-[500px] overflow-y-auto ">
+            <div id="carte3" class="flex flex-row flex-wrap relative max-w-[30%] min-w-[30%]">
+      </div>
+  </div>
+</section>
+
+
 
   <!-- popap de l'ajoute -->
   <section id="addJour" class="hidden model-animation fixed inset-0 bg-black bg-opacity-75 ">
@@ -184,7 +324,7 @@
         <div class="bg-black text-white border border-gray-700 border-r-4 border-l-4 px-2 py-2 rounded-3xl" style="max-width: 500px;">
             <div class="flex justify-center align-middle my-2 gap-[300px]">
                 <span class="border border-gray-700 border-l-4 px-2 py-1 rounded-3xl bg-blue-950">add new task</span>
-                <button type="button" onclick="returnPageajout()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/chenge.png" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
+                <button type="button" onclick="returnPageajout()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/x.jpg" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
             </div>
             <form action="" method="post" class="bg-white text-black flex-col justify-center gap-5 border-4 border-black  hover:border-blue-800 p-5 rounded-3xl w-[100%] max-h-[500px] overflow-y-auto ">
                 <label for="name">name</label>
@@ -257,7 +397,7 @@
       <div class="bg-black text-white border border-gray-700 border-r-4 border-l-4 px-2 py-2 rounded-3xl" style="max-width: 500px;">
           <div class="flex justify-center align-middle my-2 gap-[300px]">
               <span class="border border-gray-700 border-l-4 px-2 py-1 rounded-3xl bg-blue-950">add new task</span>
-              <button type="button" onclick="returnPageditay()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/chenge.png" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
+              <button type="button" onclick="returnPageditay()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/x.jpg" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
           </div>
           <form id="datails" action="" method="post" class="bg-white text-black flex-col justify-center gap-5 border-4 border-black  hover:border-blue-800 p-5 rounded-3xl w-[100%] max-h-[500px] overflow-y-auto ">
           </form>

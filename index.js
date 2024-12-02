@@ -827,7 +827,7 @@ const position=document.getElementById("position");
 const club=document.getElementById("club");
 
 
-
+// popup de jour
 function toggleModalajout(){
   jour.classList.remove("hidden");
   jour.classList.add("show");
@@ -1022,18 +1022,6 @@ function removeplaer(playername){
     }
   }
   toggleModalatoutjout();
-}
-
-
-function ggggg(){
-  // const id = element.parentElement.parentElement.firstChild.id;
-  // console.log(element);
-  const div = document.getElementById('div1');
-  const paragraphs = div.querySelectorAll('p');
-  const image = div.querySelectorAll('img');  
-
-  paragraphs.forEach(p => p.remove());
-  image.forEach(img => img.remove());
 }
 
 

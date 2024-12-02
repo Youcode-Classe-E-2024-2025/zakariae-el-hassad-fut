@@ -827,7 +827,7 @@ const position=document.getElementById("position");
 const club=document.getElementById("club");
 
 
-
+// popup de jour
 function toggleModalajout(){
   jour.classList.remove("hidden");
   jour.classList.add("show");

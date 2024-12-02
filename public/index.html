@@ -10,7 +10,7 @@
 <body class="bg-main-img bg-cover bg-center bg-no-repeat w-[100%] flex flex-row h-screen text-white backdrop-blur-sm">
 
   <div id="message" class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-90 text-white p-6 rounded-3xl text-center text-lg z-50">
-    jfdnjfvifklnviubvif;e,ivfrbr ,rir.
+    Ce site n'est pas fonctionnel en mode portrait sur les téléphones ou les tablettes. Pour une expérience optimale, veuillez orienter votre appareil en mode paysage (horizontal). Assurez-vous de verrouiller l'orientation si nécessaire pour éviter les basculements inattendus
     <script>
       document.addEventListener('DOMContentLoaded',()=> {
         const scapmessage=document.getElementById("message");
@@ -110,6 +110,8 @@
             </div>
         </div>
     </main>
+
+    
     <nav class="bg-black w-80 flex flex-col items-center">
       <div class="relative w-[50%]">
         <img class="w-full h-auto" src="../img/MANAGER.png" alt="large image">
@@ -117,25 +119,25 @@
         <p class="absolute top-[60%] left-1/2 transform -translate-x-1/2 text-white font-bold text-[20px]">guardiola</p>
       </div>
       <div class="mt-4 text-center text-white">
-        <p>FORCE COLLECTIVE</p>
-        <p class="text-[40px]">3126</p>
+        <p>FORMATION</p>
+        <p class="text-[40px]">4-3-3</p>
       </div>
       <div class="w-[20%] mt-8 text-center text-white">
         <p class="flex justify-center align-middle">chengement</p>
         <button onclick="toggleModalchengement()"><img class="rounded-2xl" src="../img/player.png" alt=""></button>
       </div>
       <div class="w-[20%] mt-8 text-center text-white">
-        <p>PLAYERS</p>
+        <p>JOUEUSES</p>
         <button onclick="toggleModalatoutjout()"><img class="rounded-2xl" src="../img/player.png" alt=""></button>
       </div>
       <div class="w-[20%] mt-8 text-center text-white">
-        <p>add jour</p>
+        <p>ajouter un jour</p>
         <button onclick="toggleModalajout()"><img class="rounded-2xl" src="../img//+.png" alt=""></button>
       </div>
     </nav>
 
 
-    <!-- popap  des jour -->
+    <!-- popup  des jour -->
     
     <section id="addModal" class="hidden model-animation fixed inset-0 bg-black bg-opacity-75 ">
       <div id="task-modal"class="flex flex-wrap justify-center align-middle my-[50px] gap-[120px]">
@@ -150,7 +152,7 @@
       </div>
   </section>
 
-  <!-- popap tout  des jour -->
+  <!-- popup tout  des jour -->
     
   <section id="addtoutmodel" class="hidden model-animation fixed inset-0 bg-black bg-opacity-75 ">
     <div id="task-modal"class="flex flex-wrap justify-center align-middle my-[50px] gap-[120px] ">
@@ -167,7 +169,7 @@
     </div>
 </section>
 
-  <!-- popap chengement -->
+  <!-- popup chengement -->
     
   <section id="addchengement" class="hidden model-animation fixed inset-0 bg-black bg-opacity-75 ">
     <div id="task-modal"class="flex flex-wrap justify-center align-middle my-[50px] gap-[120px] ">
@@ -235,9 +237,6 @@
                   <img class="w-full h-auto" src="../img/carte.gif" alt="large image">
                   <div id="CMD1"></div>
                   <div>
-                    <button>
-                      <img class="absolute w-[30%] left-8 bottom-1 h-auto" src="../img/delete.png" alt="change">
-                    </button>
                     <button onclick="toggleModalatoutjoutchengement('CMD')">
                       <img class="absolute w-[30%] right-2 bottom-1 h-auto" src="../img/chenge.png" alt="change">
                     </button>
@@ -270,7 +269,7 @@
     </div>
 </section>
 
-
+<!-- le chois des jours de chengement -->
 <section id="addModal1" class="hidden model-animation fixed inset-0 bg-black bg-opacity-75 ">
   <div id="task-modal"class="flex flex-wrap justify-center align-middle my-[50px] gap-[120px]">
       <div class="bg-black text-white border border-gray-700 border-r-4 border-l-4 px-2 py-2 rounded-3xl" style="max-width: 500px;">
@@ -286,12 +285,12 @@
 
 
 
-  <!-- popap de l'ajoute -->
+  <!-- popup de l'ajoute -->
   <section id="addJour" class="hidden model-animation fixed inset-0 bg-black bg-opacity-75 ">
     <div id="task-modal"class="flex flex-wrap justify-center align-middle my-[50px] gap-[120px]">
         <div class="bg-black text-white border border-gray-700 border-r-4 border-l-4 px-2 py-2 rounded-3xl" style="max-width: 500px;">
             <div class="flex justify-center align-middle my-2 gap-[300px]">
-                <span class="border border-gray-700 border-l-4 px-2 py-1 rounded-3xl bg-blue-950">add new task</span>
+                <span class="border border-gray-700 border-l-4 px-2 py-1 rounded-3xl bg-blue-950">ajouter un jour</span>
                 <button type="button" onclick="returnPageajout()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/x.jpg" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
             </div>
             <form action="" method="post" class="bg-white text-black flex-col justify-center gap-5 border-4 border-black  hover:border-blue-800 p-5 rounded-3xl w-[100%] max-h-[500px] overflow-y-auto ">
@@ -359,20 +358,6 @@
 
 
 
-
-<section id="ditayJour" class="hidden model-animation fixed inset-0 bg-black bg-opacity-75 ">
-  <div id="task-modal"class="flex flex-wrap justify-center align-middle my-[50px] gap-[120px]">
-      <div class="bg-black text-white border border-gray-700 border-r-4 border-l-4 px-2 py-2 rounded-3xl" style="max-width: 500px;">
-          <div class="flex justify-center align-middle my-2 gap-[300px]">
-              <span class="border border-gray-700 border-l-4 px-2 py-1 rounded-3xl bg-blue-950">add new task</span>
-              <button type="button" onclick="returnPageditay()" class="border border-gray-700 hover:border-gray-200 border-l-4 px-1 py-1 rounded-3xl bg-blue-950"><img src="../img/x.jpg" alt="" style="width: 15px; height: 15px; margin: 10px;"></button>
-          </div>
-          <form id="datails" action="" method="post" class="bg-white text-black flex-col justify-center gap-5 border-4 border-black  hover:border-blue-800 p-5 rounded-3xl w-[100%] max-h-[500px] overflow-y-auto ">
-          </form>
-          
-      </div>
-  </div>
-</section>
 
   <script src="../index.js"></script>
 </body>

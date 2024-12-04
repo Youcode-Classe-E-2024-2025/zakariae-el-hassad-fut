@@ -830,7 +830,6 @@ const club=document.getElementById("club");
 // popup de jour
 function toggleModalajout(){
   jour.classList.remove("hidden");
-  jour.classList.add("show");
 }
 function returnPageajout(){
   jour.classList.add("hidden");
@@ -858,7 +857,7 @@ console.log(position)
   clearContent();
   dataplayer.push(newplayer);
   localStorage.setItem('product', JSON.stringify(dataplayer));
-  console.log(localStorage.getItem('product'));
+  // console.log(localStorage.getItem('product'));
   document.getElementById('addJour').classList.add('hidden');
 });
 
@@ -881,7 +880,6 @@ function clearContent(){
 
 function toggleModaljour(position){
     Modal.classList.remove("hidden");
-    Modal.classList.add("show");
     carte(position)
 }
 
@@ -895,7 +893,7 @@ function carte(position) {
     let playHTML = '';
 
     const filteredPlayers = dataplayer.filter(player => player.position === position);
-    console.log("here are the filtred players", filteredPlayers);
+    // console.log("here are the filtred players", filteredPlayers);
     
 
     filteredPlayers.forEach(play => {
@@ -968,14 +966,13 @@ function addPlayer(tes) {
             </div>
         `;
     }
-    console.log("hbdjhdjvdsjhcsdhc",targetElement)
+    // console.log("hbdjhdjvdsjhcsdhc",targetElement)
     Modal.classList.add("hidden");
 }
 
 
 function toggleModalatoutjout(){
   joueurs.classList.remove("hidden");
-  joueurs.classList.add("show");
   toutcarte(dataplayer)
 }
 function returnPageatoutjout(){
@@ -1062,7 +1059,6 @@ function returnPageditay(){
  
  function toggleModalchengement() {
   addchengement.classList.remove("hidden");
-  addchengement.classList.add("show");
 }
 function returnPagechengement() {
   addchengement.classList.add("hidden");
@@ -1072,7 +1068,6 @@ function returnPagechengement() {
 
 function toggleModalatoutjoutchengement(position) {
   Modal1.classList.remove("hidden");
-  Modal1.classList.add("show");
   carte1(position);
 }
 
@@ -1085,7 +1080,7 @@ function carte1(position) {
   let playHTML = '';
 
   const filteredPlayers = dataplayer.filter(player => player.position === position);
-  console.log("here are the filtred players", filteredPlayers);
+  // console.log("here are the filtred players", filteredPlayers);
   
 
   filteredPlayers.forEach(play => {
@@ -1158,7 +1153,7 @@ function addPlayer1(tes) {
           </div>
       `;
   }
-  console.log("hbdjhdjvdsjhcsdhc",targetElement)
+  // console.log("hbdjhdjvdsjhcsdhc",targetElement)
   Modal1.classList.add("hidden");
 }
 
